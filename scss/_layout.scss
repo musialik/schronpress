@@ -1,0 +1,9 @@
+body {
+  margin: 0 $gutter/2;
+}
+.wrapper {
+  margin: auto;
+  @include breakpoint(12) {
+    @include width(12);
+  }
+}

@@ -61,6 +61,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-article {
-  width: 18.75em;
+body {
+  margin: 0 0.625em;
+}
+
+.wrapper {
+  margin: auto;
+}
+@media (min-width: 61.25em) {
+  .wrapper {
+    width: 58.75em;
+  }
 }

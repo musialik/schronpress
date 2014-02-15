@@ -11,7 +11,11 @@
 @import 'compass/utilities/general/clearfix';
 
 @import 'grid';
-
-article {
-  @include width(4);
-}
+@import 'layout';
+@import 'text';
+@import 'links';
+@import 'header';
+@import 'content';
+@import 'wp';
+@import 'sidebar';
+@import 'footer';

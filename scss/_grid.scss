@@ -12,5 +12,6 @@ $gutter: 20px / $em;
 
 // Breakpoints
 @mixin breakpoint($cols) {
-    @media (min-width: ($cols * ($column + $gutter))) { @content; }
+    @media (min-width: ($cols * ($column + $gutter) + $gutter )) { @content; }
+    // + $gutter because of body margin
 }
