@@ -7,3 +7,69 @@
   	cursor: pointer;
   }
 }
+
+
+// Front page
+
+.carousel {
+	margin-top: 2em;
+	background-color: $carousel-color;
+	color: $white;
+	h1, h2, h3, h4, h5, h6, a {
+		color: $white;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+.carousel-item {
+	&:not(:first-child) {
+		display: none;
+	}
+}
+.carousel-item-img {}
+.carousel-item-content {
+	padding: 1.5em;
+	padding-left: .5em;
+}
+
+// Sections' header
+.fp-header {
+	@include clearfix;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid $light-grey;
+	font-size: 1.125em;
+	font-weight: 400;
+	> a {
+		font-size: .7em;
+		float: right;
+	}
+}
+
+// Elements' header
+.fp-item-header {
+	margin: .05em 0;
+	font-size: 1.125em;
+	font-weight: 400;
+}
+
+%fp-item-content {
+	font-size: .875em;
+	line-height: 1.4em;
+}
+
+.news {}
+.news-item {}
+.news-item-img {}
+.news-item-content {
+	@extend %fp-item-content;
+}
+
+.adoptions {}
+.adoptions-item {}
+.adoptions-item-img {}
+.adoptions-item-content {
+	@extend %fp-item-content;
+}
+

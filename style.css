@@ -65,6 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   overflow: hidden;
   *zoom: 1;
   margin: auto;
+  padding: 0 0.625em;
   width: 58.75em;
 }
 
@@ -86,6 +87,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .footer-right {
   width: 23.75em;
   float: right;
+}
+
+.news-item:not(:last-child), .adoptions-item:not(:last-child) {
+  margin-right: 1.25em;
+}
+
+.carousel {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.carousel-item-img {
+  width: 38.75em;
+  float: left;
+}
+
+.carousel-item-content-box {
+  width: 18.75em;
+  float: right;
+}
+
+.news, .adoptions {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+.news-item {
+  width: 18.75em;
+  float: left;
+}
+
+.adoptions-item {
+  width: 13.75em;
+  float: left;
 }
 
 body {
@@ -147,6 +182,10 @@ ul {
 
 a {
   color: #136fd2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .navbar-bg, .navbar > ul > li:hover > ul {
@@ -201,14 +240,57 @@ a {
   cursor: pointer;
 }
 
+.carousel {
+  margin-top: 2em;
+  background-color: #d48a0f;
+  color: white;
+}
+.carousel h1, .carousel h2, .carousel h3, .carousel h4, .carousel h5, .carousel h6, .carousel a {
+  color: white;
+}
+.carousel a {
+  text-decoration: underline;
+}
+
+.carousel-item:not(:first-child) {
+  display: none;
+}
+
+.carousel-item-content {
+  padding: 1.5em;
+  padding-left: .5em;
+}
+
+.fp-header {
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #dddddd;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+.fp-header > a {
+  font-size: .7em;
+  float: right;
+}
+
+.fp-item-header {
+  margin: .05em 0;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+.news-item-content, .adoptions-item-content {
+  font-size: .875em;
+  line-height: 1.4em;
+}
+
 .sidebar {
   font-size: .875em;
 }
 .sidebar a {
   text-decoration: none;
-}
-.sidebar a:hover {
-  text-decoration: underline;
 }
 .sidebar ul, .sidebar ol {
   margin: 0;
@@ -231,7 +313,7 @@ a {
 }
 
 .footer-bg {
-  margin-top: 1.5em;
+  margin-top: 3em;
   background-color: #a1191d;
 }
 
