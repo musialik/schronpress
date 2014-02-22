@@ -1,5 +1,3 @@
-# Adopt Press is a wordpress theme for animal shelters
+# Scronpress is a wordpress theme for an animal shelter
 
-It supports custom post type for listing animals available for adoption. 
-
-Originally created for http://otozanimalsoswiecim.pl/
+See it in action: http://otozanimalsoswiecim.pl/

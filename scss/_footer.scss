@@ -1,0 +1,42 @@
+.footer-bg {
+	margin-top: 1.5em;
+	background-color: $footer-color;
+}
+.footer {
+	color: $white;
+	padding-bottom: 2em;
+}
+.footer-widget {
+	
+}
+.footer-header {
+	color: $white;
+	font-size: 1.875em;
+	font-weight: 300;
+}
+.footer-content {
+	font-size: .875em;
+}
+
+.footer-form {
+
+}
+
+.search-footer {
+	width: 80%;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	padding: .75em;
+}
+.btn-footer {
+	width: 19%;
+	@extend %btn;
+	margin: 0;
+	margin-left: -.2em;
+	color: $white;
+	background-color: saturate(darken($footer-color, 10%), 10%);
+	&:hover {
+		background-color: saturate(darken($footer-color, 15%), 10%);
+	}
+}

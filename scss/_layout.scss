@@ -17,3 +17,12 @@ body {
 	@include width(4);
 	float: right;
 }
+
+.footer-left {
+	@include width(5);
+	float: left;
+}
+.footer-right {
+	@include width(5);
+	float: right;
+}

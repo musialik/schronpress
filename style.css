@@ -1,6 +1,6 @@
 /*! 
- * Theme Name: Adoptpress
- * Description: Adoptpress is a wordpress theme for animal shelters
+ * Theme Name: Schronpress
+ * Description: Scronpress is a wordpress theme for an animal shelter
  * Version: 0.0.1
  * Author: Michal Musialik
  * Author URI: http://michalmusialik.com/
@@ -75,6 +75,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .sidebar {
   width: 18.75em;
+  float: right;
+}
+
+.footer-left {
+  width: 23.75em;
+  float: left;
+}
+
+.footer-right {
+  width: 23.75em;
   float: right;
 }
 
@@ -181,6 +191,16 @@ a {
   position: absolute;
 }
 
+.btn-footer {
+  display: inline-block;
+  padding: .75em;
+  border: 0;
+  outline: 0;
+}
+.btn-footer:hover {
+  cursor: pointer;
+}
+
 .sidebar {
   font-size: .875em;
 }
@@ -208,4 +228,43 @@ a {
 
 .sidebar-content {
   margin: 0;
+}
+
+.footer-bg {
+  margin-top: 1.5em;
+  background-color: #a1191d;
+}
+
+.footer {
+  color: white;
+  padding-bottom: 2em;
+}
+
+.footer-header {
+  color: white;
+  font-size: 1.875em;
+  font-weight: 300;
+}
+
+.footer-content {
+  font-size: .875em;
+}
+
+.search-footer {
+  width: 80%;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  padding: .75em;
+}
+
+.btn-footer {
+  width: 19%;
+  margin: 0;
+  margin-left: -.2em;
+  color: white;
+  background-color: #7c0b0f;
+}
+.btn-footer:hover {
+  background-color: #64090c;
 }

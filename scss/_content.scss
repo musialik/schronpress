@@ -1,0 +1,9 @@
+%btn {
+  display: inline-block;
+  padding: .75em;
+  border: 0;
+  outline: 0;
+  &:hover {
+  	cursor: pointer;
+  }
+}
