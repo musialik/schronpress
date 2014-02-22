@@ -1,9 +1,19 @@
 body {
-  margin: 0 $gutter/2;
+  // margin: 0 $gutter/2;
 }
+
 .wrapper {
+	@include clearfix;
   margin: auto;
-  @include breakpoint(12) {
-    @include width(12);
-  }
+  @include width(12);
+}
+
+.content {
+	@include width(8);
+	float: left;
+}
+
+.sidebar {
+	@include width(4);
+	float: right;
 }

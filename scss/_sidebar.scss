@@ -1,0 +1,28 @@
+.sidebar {
+	font-size: .875em;
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	ul, ol {
+		margin: 0;		
+		list-style: none;
+	}
+}
+
+.sidebar-widget {
+	padding: 2em;
+	margin: 2em 0;
+	background-color: $sidebar-color;
+}
+
+.sidebar-header {
+	margin: 0;
+	font-size: 1em;
+}
+
+.sidebar-content {
+  margin: 0;
+}
