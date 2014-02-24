@@ -1,9 +1,9 @@
 .sidebar {
 	a {
 		text-decoration: none;
-		// &:hover {
-		// 	text-decoration: underline;
-		// }
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	ul, ol {
 		margin: 0;		
@@ -16,6 +16,9 @@
 	padding: 2em;
 	margin: 2em 0;
 	background-color: $sidebar-color;
+	&.alt-bg {
+		background-color: $sidebar-alt-color;
+	}
 }
 
 .sidebar-header {

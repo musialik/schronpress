@@ -3,13 +3,36 @@ $alt-header-stack: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 $body-stack: $header-stack;
 
 $light-grey: #ddd;
+$medium-grey: #888;
 $dark-grey: #444;
 $white: #fff;
 
 $link-color: #136fd2;
 $sidebar-color: #eff0f4;
+$sidebar-alt-color: #fff2df;
 $navbar-color: #263553;
 $footer-color: #a1191d;
 
 $carousel-color: #d48a0f;
 $pager-color: #6d93b8;
+$carousel-color: $footer-color;
+$overlay-color: fade-out(#000, .8);
+
+@mixin border-bottom() {
+	border-bottom: 1px solid $light-grey;
+}
+
+%img-small {
+	height: 145px;
+	width: 220px;
+}
+
+%img-medium {
+	height: 200px;
+	width: 300px;
+}
+
+%img-single {
+	height: 700px;
+	width: 410px;
+}

@@ -61,6 +61,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+img {
+  display: block;
+}
+
+.box-link .overlay, .animal-img, .index-thumbnail {
+  height: 145px;
+  width: 220px;
+}
+
+.news .overlay {
+  height: 200px;
+  width: 300px;
+}
+
+.single-thumbnail {
+  height: 700px;
+  width: 410px;
+}
+
 .wrapper {
   overflow: hidden;
   *zoom: 1;
@@ -259,9 +278,31 @@ a:hover {
   cursor: pointer;
 }
 
+.box-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.box-link:hover {
+  text-decoration: none;
+}
+.box-link .overlay {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.box-link:hover .overlay {
+  display: block;
+  position: absolute;
+}
+
+.page-header {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 1em;
+}
+
 .carousel {
   margin-top: 2em;
-  background-color: #d48a0f;
+  background-color: #a1191d;
   color: white;
 }
 .carousel h1, .carousel h2, .carousel h3, .carousel h4, .carousel h5, .carousel h6, .carousel a {
@@ -295,7 +336,7 @@ a:hover {
 }
 
 .box-item-header {
-  margin: .05em 0;
+  margin: .25em 0;
   font-size: 1.125em;
   font-weight: 400;
 }
@@ -305,11 +346,11 @@ a:hover {
   line-height: 1.4em;
 }
 
-.news, .adoptions {
+.adoptions {
   margin-bottom: 2em;
 }
 
-.carousel, .news-item-img, .adoptions-item-img, .animal-img {
+.box-link .overlay, .carousel, .news-item-img, .adoptions-item-img, .animal-img, .content img {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -357,8 +398,32 @@ a:hover {
   float: right;
 }
 
+.single-thumbnail {
+  clear: both;
+  margin-bottom: 1em;
+}
+
+.index-thumbnail {
+  float: left;
+  clear: both;
+  margin-right: 1em;
+}
+
+.entry {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #dddddd;
+}
+
+.meta {
+  color: #888888;
+  font-size: .75em;
+}
+
 .sidebar a {
   text-decoration: none;
+}
+.sidebar a:hover {
+  text-decoration: underline;
 }
 .sidebar ul, .sidebar ol {
   margin: 0;
@@ -370,6 +435,9 @@ a:hover {
   padding: 2em;
   margin: 2em 0;
   background-color: #eff0f4;
+}
+.sidebar-widget.alt-bg {
+  background-color: #fff2df;
 }
 
 .sidebar-header {

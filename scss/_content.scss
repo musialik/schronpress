@@ -7,7 +7,30 @@
   	cursor: pointer;
   }
 }
+.box-link {
+	// link tag that contains block tags
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		text-decoration: none;
+	}
+	.overlay {
+		@extend %img-small;
+		@extend %rounded;
+		display: none;
+		background-color: $overlay-color;
+	}
+	&:hover .overlay {
+		display: block;
+		position: absolute;
+	}
+}
 
+.page-header {
+	@include border-bottom;
+	margin-bottom: 1em;
+}
 
 // Front page
 
@@ -40,7 +63,7 @@
 	@include clearfix;
 	margin-top: 2em;
 	margin-bottom: 1em;
-	border-bottom: 1px solid $light-grey;
+	@include border-bottom;
 	font-size: 1.125em;
 	font-weight: 400;
 	> a {
@@ -51,7 +74,7 @@
 
 // Elements' header
 .box-item-header {
-	margin: .05em 0;
+	margin: .25em 0;
 	font-size: 1.125em;
 	font-weight: 400;
 }
@@ -70,7 +93,10 @@
 
 
 .news {
-	@extend %fp-rythm;
+	// @extend %fp-rythm;
+	.overlay {
+		@extend %img-medium;
+	}
 }
 .news-item {}
 .news-item-img {
@@ -98,6 +124,7 @@
 .animal-header {}
 .animal-img {
 	@extend %rounded;
+	@extend %img-small;
 }
 .animal-content {
 	@extend %box-item-content;
@@ -133,4 +160,35 @@
 .btn-next {
 	@extend %btn-pager;
 	float: right;
+}
+
+
+// Single
+
+.content {
+	img {
+		@extend %rounded;
+		// margin-bottom: 1em;
+	}
+}
+
+.single-thumbnail {
+	@extend %img-single;
+	clear: both;
+	margin-bottom: 1em;
+}
+.index-thumbnail {
+	@extend %img-small;
+	float: left;
+	clear: both;
+	margin-right: 1em;
+}
+
+.entry {
+	margin-bottom: 2em;
+	@include border-bottom;
+}
+.meta {
+	color: $medium-grey;
+	font-size: .75em;
 }

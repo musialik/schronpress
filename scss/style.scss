@@ -8,6 +8,9 @@
  */
 
 @import 'compass/reset';
+img {
+	display: block;
+}
 @import 'compass/utilities/general/clearfix';
 @import 'compass/css3';
 
