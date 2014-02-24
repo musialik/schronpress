@@ -12,12 +12,12 @@ body {
 }
 
 .content {
-	@include width(8);
+	@include width(9);
 	float: left;
 }
 
 .sidebar {
-	@include width(4);
+	@include width(3);
 	float: right;
 }
 
@@ -63,4 +63,19 @@ body {
 	@include width(3);
 	float: left;
 	@extend %blocks-in-single-row;
+}
+
+.animals {
+	@include clearfix;
+}
+.animal {
+	@include width(3);
+	float: left;
+	&:not(:nth-child(3n)) {
+		margin-right: $gutter;
+	}
+}
+.pager {
+	@include clearfix;
+	clear: both;
 }

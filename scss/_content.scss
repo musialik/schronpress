@@ -15,6 +15,8 @@
 	margin-top: 2em;
 	background-color: $carousel-color;
 	color: $white;
+	@extend %rounded;
+
 	h1, h2, h3, h4, h5, h6, a {
 		color: $white;
 	}
@@ -48,28 +50,87 @@
 }
 
 // Elements' header
-.fp-item-header {
+.box-item-header {
 	margin: .05em 0;
 	font-size: 1.125em;
 	font-weight: 400;
 }
 
-%fp-item-content {
+%box-item-content {
 	font-size: .875em;
 	line-height: 1.4em;
 }
+%fp-rythm {
+	// Add vertical rythm to front page
+	margin-bottom: 2em;
+}
+%rounded {
+	@include border-radius(2px);
+}
 
-.news {}
+
+.news {
+	@extend %fp-rythm;
+}
 .news-item {}
-.news-item-img {}
+.news-item-img {
+	@extend %rounded;
+}
 .news-item-content {
-	@extend %fp-item-content;
+	@extend %box-item-content;
 }
 
-.adoptions {}
+
+.adoptions {
+	@extend %fp-rythm;
+}
 .adoptions-item {}
-.adoptions-item-img {}
+.adoptions-item-img {
+	@extend %rounded;
+}
 .adoptions-item-content {
-	@extend %fp-item-content;
+	@extend %box-item-content;
 }
 
+
+// List of animals
+
+.animal-header {}
+.animal-img {
+	@extend %rounded;
+}
+.animal-content {
+	@extend %box-item-content;
+	margin-bottom: 3em;
+}
+
+.pager {
+	font-size: .875em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+.pager-page {
+	display: inline-block;
+	width: 6em;
+	padding: .5em .75em;
+}
+%btn-pager {
+	@extend %btn;
+	padding: .5em .75em;
+	@include border-radius(4px);
+	background-color: $pager-color;
+	border-bottom: 2px solid darken($pager-color, 17%);
+	color: $white;
+	&:hover {
+		text-decoration: none;
+		background-color: darken($pager-color, 7%);
+	}
+}
+.btn-previous {
+	@extend %btn-pager;
+	float: left;
+}
+.btn-next {
+	@extend %btn-pager;
+	float: right;
+}

@@ -1,5 +1,4 @@
 .sidebar {
-	font-size: .875em;
 	a {
 		text-decoration: none;
 		// &:hover {
@@ -13,6 +12,7 @@
 }
 
 .sidebar-widget {
+	font-size: .875em;
 	padding: 2em;
 	margin: 2em 0;
 	background-color: $sidebar-color;
