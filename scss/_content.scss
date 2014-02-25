@@ -75,12 +75,12 @@
 // Elements' header
 .box-item-header {
 	margin: .25em 0;
-	font-size: 1.125em;
+	font-size: 1.0625em;
 	font-weight: 400;
 }
 
 %box-item-content {
-	font-size: .875em;
+	font-size: .8125em;
 	line-height: 1.4em;
 }
 %fp-rythm {
@@ -187,8 +187,11 @@
 .entry {
 	margin-bottom: 2em;
 	@include border-bottom;
+	@include clearfix;
 }
 .meta {
+	margin-top: 1em;
+	clear: both;
 	color: $medium-grey;
 	font-size: .75em;
 }

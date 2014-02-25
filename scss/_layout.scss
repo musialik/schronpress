@@ -71,6 +71,9 @@ body {
 .animal {
 	@include width(3);
 	float: left;
+	&:nth-child(3n+1) {
+		clear: left;
+	}
 	&:not(:nth-child(3n)) {
 		margin-right: $gutter;
 	}

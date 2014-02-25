@@ -4,7 +4,13 @@
 
   <section class="content">
 
-    <?php get_template_part( 'partials/_loop' ); ?>
+		<h1><?php single_cat_title(); ?></h1>
+        
+    <section class="animals">
+	
+	    <?php get_template_part( 'partials/_loop', 'boxes' ); ?>
+
+    </section>
 
   </section>
 

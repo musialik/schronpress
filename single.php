@@ -4,7 +4,7 @@
 
   <section class="content">
 
-    <?php get_template_part( 'partials/_loop' ); ?>
+    <?php get_template_part( 'partials/_loop', 'single' ); ?>
 
   </section>
 

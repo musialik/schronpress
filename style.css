@@ -62,7 +62,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 img {
-  display: block;
+  display: inline-block;
 }
 
 .box-link .overlay, .animal-img, .index-thumbnail {
@@ -76,8 +76,8 @@ img {
 }
 
 .single-thumbnail {
-  height: 700px;
-  width: 410px;
+  height: 410px;
+  width: 700px;
 }
 
 .wrapper {
@@ -151,6 +151,9 @@ img {
   width: 13.75em;
   float: left;
 }
+.animal:nth-child(3n+1) {
+  clear: left;
+}
 .animal:not(:nth-child(3n)) {
   margin-right: 1.25em;
 }
@@ -172,6 +175,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.45em;
   color: #444444;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+  text-decoration: none;
 }
 
 h1 {
@@ -337,12 +347,12 @@ a:hover {
 
 .box-item-header {
   margin: .25em 0;
-  font-size: 1.125em;
+  font-size: 1.0625em;
   font-weight: 400;
 }
 
 .news-item-content, .adoptions-item-content, .animal-content {
-  font-size: .875em;
+  font-size: .8125em;
   line-height: 1.4em;
 }
 
@@ -412,9 +422,13 @@ a:hover {
 .entry {
   margin-bottom: 2em;
   border-bottom: 1px solid #dddddd;
+  overflow: hidden;
+  *zoom: 1;
 }
 
 .meta {
+  margin-top: 1em;
+  clear: both;
   color: #888888;
   font-size: .75em;
 }
