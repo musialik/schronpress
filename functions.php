@@ -16,13 +16,14 @@ function previous_posts_link_attributes() {
 
 
 /*
- * Set custom excerpt length
+ * Short excerpt tag
  */
-
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-function custom_excerpt_length( $length ) {
-	return 13;
+function the_short_excerpt( $number_of_words = 10 ) {
+	global $post;
+	echo implode( ' ', array_slice( explode( ' ', get_the_excerpt() ), 0, $number_of_words ) );
+	echo ' [...]';
 }
+
 
 
 /*
@@ -40,6 +41,19 @@ function schronpress_setup() {
 	/* Menus */
 	register_nav_menu( 'navbar', 'Menu górne' );
 
+}
+
+
+/*
+ * Alternative thumbnail tag (DRY)
+ */
+function the_thumbnail_or_placeholder( $size = 'thumbnail', $class = '' ) {
+	global $post;
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail( $size, array( 'class' => $class ) );
+	} else {
+		echo "<div class=\"$class placeholder\"></div>";
+	}
 }
 
 

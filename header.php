@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-    <title></title>
+    <title><?php wp_title(); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|Open+Sans:400,300,600,700,800|?family=Didact+Gothic" rel="stylesheet" type="text/css">
   </head>
   <body>
 
     <header class="wrapper">
-      <a href="#">
+      <a href="<?php bloginfo( 'url' ); ?>">
         <img src="<?php echo $template_url; ?>/img/otoz-animals-oswiecim-logo.png" alt="OTOZ Animals Oświęcim logo">
       </a>
     </header>

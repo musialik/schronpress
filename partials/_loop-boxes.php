@@ -6,13 +6,9 @@
 
       <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" class="box-link">
         <div class="overlay"></div>
-        <?php if ( has_post_thumbnail() ) : ?>
-          <?php the_post_thumbnail( 'img-small', array( 'class' => 'animal-img' ) ); ?>
-        <?php else : ?>
-          <div class="animal-img placeholder"></div>
-        <?php endif; ?>
-        <h2 class="box-item-header"><?php the_title() ?></h2>
-        <div class="animal-content"><?php the_excerpt() ?></div>
+        <?php the_thumbnail_or_placeholder( 'img-small', 'animal-img' ); ?>
+        <h2 class="box-item-header"><?php the_title(); ?></h2>
+        <div class="animal-content"><?php the_short_excerpt(); ?></div>
       </a>
 
     </article>

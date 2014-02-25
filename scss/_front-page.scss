@@ -1,0 +1,74 @@
+// Front page
+
+.carousel {
+	margin-top: 2em;
+	background-color: $carousel-color;
+	color: $white;
+	@extend %rounded;
+
+	h1, h2, h3, h4, h5, h6, a {
+		color: $white;
+	}
+	a {
+		text-decoration: underline;
+	}
+}
+.carousel-item {
+	&:not(:first-child) {
+		display: none;
+	}
+}
+.carousel-item-img {}
+.carousel-item-content {
+	padding: 1.5em;
+	padding-left: .5em;
+}
+
+// Sections' header
+.fp-header {
+	@include clearfix;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	@include border-bottom;
+	font-size: 1.125em;
+	font-weight: 400;
+	> a {
+		font-size: .7em;
+		float: right;
+		color: $link-color;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+%fp-rythm {
+	// Add vertical rythm to front page
+	margin-bottom: 2em;
+}
+
+.news {
+	// @extend %fp-rythm;
+	.overlay {
+		@extend %img-medium;
+	}
+}
+.news-item {}
+.news-item-img {
+	@extend %rounded;
+}
+.news-item-content {
+	@extend %box-item-content;
+}
+
+
+.adoptions {
+	@extend %fp-rythm;
+}
+.adoptions-item {}
+.adoptions-item-img {
+	@extend %rounded;
+}
+.adoptions-item-content {
+	@extend %box-item-content;
+}

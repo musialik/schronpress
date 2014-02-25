@@ -65,7 +65,7 @@ img {
   display: inline-block;
 }
 
-.box-link .overlay, .animal-img, .index-thumbnail {
+.box-link .overlay, .index-thumbnail, .animal-img {
   height: 145px;
   width: 220px;
 }
@@ -278,6 +278,11 @@ a:hover {
   position: absolute;
 }
 
+.page-header {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 1em;
+}
+
 .btn-previous, .btn-next, .btn-footer {
   display: inline-block;
   padding: .75em;
@@ -305,63 +310,19 @@ a:hover {
   position: absolute;
 }
 
-.page-header {
-  border-bottom: 1px solid #dddddd;
-  margin-bottom: 1em;
-}
-
-.carousel {
-  margin-top: 2em;
-  background-color: #a1191d;
-  color: white;
-}
-.carousel h1, .carousel h2, .carousel h3, .carousel h4, .carousel h5, .carousel h6, .carousel a {
-  color: white;
-}
-.carousel a {
-  text-decoration: underline;
-}
-
-.carousel-item:not(:first-child) {
-  display: none;
-}
-
-.carousel-item-content {
-  padding: 1.5em;
-  padding-left: .5em;
-}
-
-.fp-header {
-  overflow: hidden;
-  *zoom: 1;
-  margin-top: 2em;
-  margin-bottom: 1em;
-  border-bottom: 1px solid #dddddd;
-  font-size: 1.125em;
-  font-weight: 400;
-}
-.fp-header > a {
-  font-size: .7em;
-  float: right;
-}
-
 .box-item-header {
   margin: .25em 0;
   font-size: 1.0625em;
   font-weight: 400;
 }
 
-.news-item-content, .adoptions-item-content, .animal-content {
+.animal-content, .news-item-content, .adoptions-item-content {
   font-size: .8125em;
   line-height: 1.4em;
   overflow: hidden;
 }
 
-.adoptions {
-  margin-bottom: 2em;
-}
-
-.box-link .overlay, .carousel, .news-item-img, .adoptions-item-img, .animal-img, .content img {
+.box-link .overlay, .content img, .animal-img, .carousel, .news-item-img, .adoptions-item-img {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -369,8 +330,19 @@ a:hover {
   border-radius: 2px;
 }
 
-.animal-content {
-  margin-bottom: 3em;
+.placeholder {
+  background-color: #dddddd;
+}
+
+.single-thumbnail {
+  clear: both;
+  margin-bottom: 1em;
+}
+
+.index-thumbnail {
+  float: left;
+  clear: both;
+  margin-right: 1em;
 }
 
 .pager {
@@ -409,17 +381,6 @@ a:hover {
   float: right;
 }
 
-.single-thumbnail {
-  clear: both;
-  margin-bottom: 1em;
-}
-
-.index-thumbnail {
-  float: left;
-  clear: both;
-  margin-right: 1em;
-}
-
 .entry {
   margin-bottom: 2em;
   border-bottom: 1px solid #dddddd;
@@ -434,8 +395,51 @@ a:hover {
   font-size: .75em;
 }
 
-.placeholder {
-  background-color: #dddddd;
+.animal-content {
+  margin-bottom: 3em;
+}
+
+.carousel {
+  margin-top: 2em;
+  background-color: #a1191d;
+  color: white;
+}
+.carousel h1, .carousel h2, .carousel h3, .carousel h4, .carousel h5, .carousel h6, .carousel a {
+  color: white;
+}
+.carousel a {
+  text-decoration: underline;
+}
+
+.carousel-item:not(:first-child) {
+  display: none;
+}
+
+.carousel-item-content {
+  padding: 1.5em;
+  padding-left: .5em;
+}
+
+.fp-header {
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #dddddd;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+.fp-header > a {
+  font-size: .7em;
+  float: right;
+  color: #136fd2;
+}
+.fp-header > a:hover {
+  text-decoration: underline;
+}
+
+.adoptions {
+  margin-bottom: 2em;
 }
 
 .sidebar a {

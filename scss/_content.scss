@@ -1,3 +1,11 @@
+.page-header {
+	@include border-bottom;
+	margin-bottom: 1em;
+}
+
+
+// Buttons
+
 %btn {
   display: inline-block;
   padding: .75em;
@@ -7,6 +15,10 @@
   	cursor: pointer;
   }
 }
+
+
+// Boxes
+
 .box-link {
 	// link tag that contains block tags
 	display: block;
@@ -26,111 +38,46 @@
 		position: absolute;
 	}
 }
-
-.page-header {
-	@include border-bottom;
-	margin-bottom: 1em;
-}
-
-// Front page
-
-.carousel {
-	margin-top: 2em;
-	background-color: $carousel-color;
-	color: $white;
-	@extend %rounded;
-
-	h1, h2, h3, h4, h5, h6, a {
-		color: $white;
-	}
-	a {
-		text-decoration: underline;
-	}
-}
-.carousel-item {
-	&:not(:first-child) {
-		display: none;
-	}
-}
-.carousel-item-img {}
-.carousel-item-content {
-	padding: 1.5em;
-	padding-left: .5em;
-}
-
-// Sections' header
-.fp-header {
-	@include clearfix;
-	margin-top: 2em;
-	margin-bottom: 1em;
-	@include border-bottom;
-	font-size: 1.125em;
-	font-weight: 400;
-	> a {
-		font-size: .7em;
-		float: right;
-	}
-}
-
-// Elements' header
 .box-item-header {
 	margin: .25em 0;
 	font-size: 1.0625em;
 	font-weight: 400;
 }
-
 %box-item-content {
 	font-size: .8125em;
 	line-height: 1.4em;
 	overflow: hidden;
 }
-%fp-rythm {
-	// Add vertical rythm to front page
-	margin-bottom: 2em;
-}
+
+
+// Images
+
 %rounded {
 	@include border-radius(2px);
 }
-
-
-.news {
-	// @extend %fp-rythm;
-	.overlay {
-		@extend %img-medium;
+.content {
+	img {
+		@extend %rounded;
+		// margin-bottom: 1em;
 	}
 }
-.news-item {}
-.news-item-img {
-	@extend %rounded;
+.placeholder {
+	background-color: $light-grey;
 }
-.news-item-content {
-	@extend %box-item-content;
+.single-thumbnail {
+	@extend %img-single;
+	clear: both;
+	margin-bottom: 1em;
 }
-
-
-.adoptions {
-	@extend %fp-rythm;
-}
-.adoptions-item {}
-.adoptions-item-img {
-	@extend %rounded;
-}
-.adoptions-item-content {
-	@extend %box-item-content;
-}
-
-
-// List of animals
-
-.animal-header {}
-.animal-img {
-	@extend %rounded;
+.index-thumbnail {
 	@extend %img-small;
+	float: left;
+	clear: both;
+	margin-right: 1em;
 }
-.animal-content {
-	@extend %box-item-content;
-	margin-bottom: 3em;
-}
+
+
+// Pager 
 
 .pager {
 	font-size: .875em;
@@ -164,26 +111,7 @@
 }
 
 
-// Single
-
-.content {
-	img {
-		@extend %rounded;
-		// margin-bottom: 1em;
-	}
-}
-
-.single-thumbnail {
-	@extend %img-single;
-	clear: both;
-	margin-bottom: 1em;
-}
-.index-thumbnail {
-	@extend %img-small;
-	float: left;
-	clear: both;
-	margin-right: 1em;
-}
+// Loops
 
 .entry {
 	margin-bottom: 2em;
@@ -197,6 +125,15 @@
 	font-size: .75em;
 }
 
-.placeholder {
-	background-color: $light-grey;
+
+// Category
+
+.animal-header {}
+.animal-img {
+	@extend %rounded;
+	@extend %img-small;
+}
+.animal-content {
+	@extend %box-item-content;
+	margin-bottom: 3em;
 }
