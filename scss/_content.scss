@@ -82,6 +82,7 @@
 %box-item-content {
 	font-size: .8125em;
 	line-height: 1.4em;
+	overflow: hidden;
 }
 %fp-rythm {
 	// Add vertical rythm to front page
@@ -194,4 +195,8 @@
 	clear: both;
 	color: $medium-grey;
 	font-size: .75em;
+}
+
+.placeholder {
+	background-color: $light-grey;
 }

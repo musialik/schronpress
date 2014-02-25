@@ -21,7 +21,7 @@ function previous_posts_link_attributes() {
 
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function custom_excerpt_length( $length ) {
-	return 8;
+	return 13;
 }
 
 
@@ -30,10 +30,16 @@ function custom_excerpt_length( $length ) {
  */
 add_action( 'after_setup_theme', 'schronpress_setup' );
 function schronpress_setup() {
+
+	/* Thumbnails */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'img-small', 220, 145, true );
 	add_image_size( 'img-medium', 300, 200, true );
 	add_image_size( 'img-single', 700, 410, true );
+
+	/* Menus */
+	register_nav_menu( 'navbar', 'Menu górne' );
+
 }
 
 
