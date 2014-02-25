@@ -7,7 +7,7 @@
             <p>Przeszukaj wszystkie podstrony, aktualności i zwierzęta.</p>
             <form action="/" method="GET">
               <input type="search" name="s" class="search-footer">
-              <input type="submit" class="btn-footer">
+              <input type="submit" class="btn-footer" value="Szukaj">
             </form>  
           </section>
         </aside>

@@ -24,17 +24,20 @@
 }
 
 .search-footer {
+	@include box-sizing(border-box);
 	width: 80%;
+	float: left;
 	margin: 0;
 	border: 0;
 	outline: 0;
 	padding: .75em;
 }
 .btn-footer {
-	width: 19%;
+	@include box-sizing(border-box);
+	width: 20%;
+	float: right;
 	@extend %btn;
 	margin: 0;
-	margin-left: -.2em;
 	color: $white;
 	background-color: saturate(darken($footer-color, 10%), 10%);
 	&:hover {
