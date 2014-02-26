@@ -49,38 +49,8 @@
 
     <h2 class="fp-header">Zwierzęta do adopcji</h2>
 
-    <article class="adoptions-item">
-      <img src="http://lorempixel.com/220/145/cats/1" alt="" class="adoptions-item-img">
-      <h3 class="box-item-header">Przykładowy tytuł</h3>
-      <div class="adoptions-item-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <a href="#">Wszystkie psy...</a>
-      </div>
-    </article>
-    <article class="adoptions-item">
-      <img src="http://lorempixel.com/220/145/cats/2" alt="" class="adoptions-item-img">
-      <h3 class="box-item-header">Przykładowy tytuł</h3>
-      <div class="adoptions-item-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <a href="#">Wszystkie psy...</a>
-      </div>
-    </article>
-    <article class="adoptions-item">
-      <img src="http://lorempixel.com/220/145/cats/3" alt="" class="adoptions-item-img">
-      <h3 class="box-item-header">Przykładowy tytuł</h3>
-      <div class="adoptions-item-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <a href="#">Wszystkie psy...</a>
-      </div>
-    </article>
-    <article class="adoptions-item">
-      <img src="http://lorempixel.com/220/145/cats/4" alt="" class="adoptions-item-img">
-      <h3 class="box-item-header">Przykładowy tytuł</h3>
-      <div class="adoptions-item-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        <a href="#">Wszystkie psy...</a>
-      </div>
-    </article>
+    <?php get_template_part( 'partials/_loop', 'fp_adoptions' ); ?>
+
   </section>
 
 </section>
