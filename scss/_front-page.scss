@@ -72,3 +72,7 @@
 .adoptions-item-content {
 	@extend %box-item-content;
 }
+.adoptions-item-more-link {
+	display: inline-block;
+	margin-top: .35em;
+}

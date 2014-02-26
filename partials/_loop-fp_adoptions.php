@@ -3,9 +3,9 @@
    * Display latest post from each of the adoption categories
    */
   $categories = array( 
-    'psy' => 'psy-do-adopcji',
+    'psy' => 'psy do adopcji',
     'szczeniaki' => 'szczeniaki',
-    'koty' => 'koty-do-adopcji',
+    'koty' => 'koty do adopcji',
     'kocięta' => 'kocieta'
   );
 
@@ -28,7 +28,7 @@
           <div class="adoptions-item-content">
             <?php the_short_excerpt(); ?>
             <?php $category_url = get_category_link( get_cat_ID( $category_slug ) ); ?>
-            <a href="<?php echo $category_url; ?>">Wszystkie <?php echo $link_text; ?>...</a>
+            <a href="<?php echo $category_url; ?>" class="adoptions-item-more-link">Wszystkie <?php echo $link_text; ?>...</a>
           </div>
         </a>
       </article>
