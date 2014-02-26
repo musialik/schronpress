@@ -14,7 +14,7 @@
 .sidebar-widget {
 	font-size: .875em;
 	padding: 2em;
-	margin: 2em 0;
+	margin: 2*$gutter 0;
 	background-color: $sidebar-color;
 	&.alt-bg {
 		background-color: $sidebar-alt-color;
