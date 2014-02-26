@@ -1,3 +1,10 @@
+.content-bg {
+	background-color: $content-bg-color;
+}
+.white {
+	background-color: $white;
+}
+
 .page-header {
 	@include border-bottom;
 	margin-bottom: 1em;

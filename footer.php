@@ -1,4 +1,6 @@
-<section class="footer-bg">
+    </div> <!-- .content-bg -->
+    
+    <section class="footer-bg">
       <footer class="wrapper footer">
 
         <aside class="footer-widget footer-left">

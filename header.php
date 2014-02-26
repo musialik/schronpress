@@ -18,3 +18,5 @@
     </header>
 
     <?php get_template_part( 'partials/_navbar' ); ?>
+
+    <div class="content-bg">

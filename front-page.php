@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section class="wrapper">
+<section class="wrapper white">
 
   <section class="carousel">
 
