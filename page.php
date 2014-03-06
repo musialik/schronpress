@@ -2,40 +2,42 @@
 
 <section class="wrapper white">
 
-    <section class="content">
+	<section class="content">
 
-        <?php if ( have_posts() ) : ?>
-    
-            <?php while ( have_posts() ) : the_post(); ?>
-                
-                <article class="entry">
+		<?php if ( have_posts() ) : ?>
+	
+			<?php while ( have_posts() ) : the_post(); ?>
+				
+				<article class="entry">
 
-                    <h1><?php the_title() ?></h1>
+					<h1><?php the_title() ?></h1>
 
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <?php the_post_thumbnail( 'img-single', array( 'class' => 'single-thumbnail' ) ); ?>
-                    <?php endif; ?>
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="box-img-container">
+							<?php the_post_thumbnail( 'img-single', array( 'class' => 'single-thumbnail' ) ); ?>
+						</div>
+					<?php endif; ?>
 
-                    <?php the_content(); ?>
+					<?php the_content(); ?>
 
-                    <div class="meta">Dodano: <?php echo get_the_date('j F Y'); ?>, kategoria: <?php the_category( ', ' ); ?></div>
+					<div class="meta">Dodano: <?php echo get_the_date('j F Y'); ?>, kategoria: <?php the_category( ', ' ); ?></div>
 
-                </article>
+				</article>
 
-            <?php endwhile; ?>
-            
-            <?php get_template_part( 'partials/_pagination' ); ?>
+			<?php endwhile; ?>
+			
+			<?php get_template_part( 'partials/_pagination' ); ?>
 
-        <?php else : ?>
+		<?php else : ?>
 
-            Nic nie znaleziono
+			Nic nie znaleziono
 
-        <?php endif; ?>
+		<?php endif; ?>
 
-    </section>
+	</section>
 
-    <?php get_sidebar(); ?>
-        
+	<?php get_sidebar(); ?>
+		
 </section>
 
 <?php get_footer(); ?> 

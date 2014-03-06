@@ -16,7 +16,9 @@
 
 			      <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" class="box-link">
 			        <div class="overlay"></div>
-			        <?php the_thumbnail_or_placeholder( 'img-small', 'animal-img' ); ?>
+			        <div class="box-img-container">
+				        <?php the_thumbnail_or_placeholder( 'img-small', 'animal-img' ); ?>
+			        </div>
 			        <h2 class="box-item-header"><?php the_title(); ?></h2>
 			        <div class="animal-content"><?php the_short_excerpt(); ?></div>
 			      </a>

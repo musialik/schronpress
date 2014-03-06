@@ -54,7 +54,9 @@
                 <article class="news-item">
                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="box-link">
                         <div class="overlay"></div>
-                        <?php the_thumbnail_or_placeholder( 'img-medium', 'news-item-img' ); ?>
+                        <div class="box-img-container">
+                            <?php the_thumbnail_or_placeholder( 'img-medium', 'news-item-img' ); ?>
+                        </div>
                         <h3 class="box-item-header"><?php the_title(); ?></h3>
                         <div class="news-item-content"><?php the_excerpt(); ?></div>
                     </a>
@@ -95,7 +97,9 @@
                     <article class="adoptions-item">
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="box-link">
                             <div class="overlay"></div>
-                            <?php the_thumbnail_or_placeholder( 'img-small', 'adoptions-item-img' ); ?>
+                            <div class="box-img-container">
+                                <?php the_thumbnail_or_placeholder( 'img-small', 'adoptions-item-img' ); ?>
+                            </div>
                             <h3 class="box-item-header"><?php the_title(); ?></h3>
                             <div class="adoptions-item-content">
                                 <?php the_short_excerpt(); ?>

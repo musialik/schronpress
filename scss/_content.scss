@@ -41,8 +41,18 @@
 		background-color: $overlay-color;
 	}
 	&:hover .overlay {
+		margin-top: 1px; // Compensate for .box-img-container border
 		display: block;
 		position: absolute;
+	}
+}
+.box-img-container {
+	border: 1px solid $medium-grey;
+	overflow: hidden;
+	// @include border-radius(3px);
+	img { 
+		display: block; 
+		max-width: 100%;
 	}
 }
 .box-item-header {
@@ -60,7 +70,7 @@
 // Images
 
 %rounded {
-	@include border-radius(2px);
+	// @include border-radius(2px);
 }
 .content {
 	img {

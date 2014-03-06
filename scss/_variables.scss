@@ -17,7 +17,7 @@ $footer-color: #a1191d;
 $carousel-color: #d48a0f;
 $pager-color: #6d93b8;
 $carousel-color: $footer-color;
-$overlay-color: fade-out(#000, .8);
+$overlay-color: fade-out(#444, .9);
 
 @mixin border-bottom() {
 	border-bottom: 1px solid $light-grey;
