@@ -93,12 +93,16 @@ img {
 
 .content-bg {
   margin-bottom: 1.875em;
-  padding: 1.875em 0;
+  padding: 2.5em 0;
 }
 
 .content {
   width: 43.75em;
   float: left;
+}
+
+.entry {
+  margin-right: 0.625em;
 }
 
 .sidebar {
@@ -261,7 +265,7 @@ a:hover {
   margin: 0;
 }
 .navbar a {
-  padding: .5em .75em;
+  padding: .7em .75em;
   font-size: 0.875em;
   display: inline-block;
   text-decoration: none;
@@ -325,7 +329,7 @@ a:hover {
 }
 
 .content-bg {
-  background-color: whitesmoke;
+  background-color: #dadada;
 }
 
 .white {
@@ -415,8 +419,8 @@ a:hover {
 }
 
 .carousel {
-  margin-top: 2em;
-  background-color: #a1191d;
+  margin-top: 2.5em;
+  background-color: #263553;
   color: white;
 }
 .carousel h1, .carousel h2, .carousel h3, .carousel h4, .carousel h5, .carousel h6, .carousel a {
@@ -493,13 +497,13 @@ a:hover {
 }
 
 .footer-bg {
-  background-color: #a1191d;
+  background-color: #263553;
 }
 
 .footer {
   color: white;
-  padding-top: 1em;
-  padding-bottom: 5em;
+  padding-top: 2em;
+  padding-bottom: 7em;
 }
 
 .footer-header {
@@ -532,8 +536,8 @@ a:hover {
   float: right;
   margin: 0;
   color: white;
-  background-color: #7c0b0f;
+  background-color: #121d34;
 }
 .btn-footer:hover {
-  background-color: #64090c;
+  background-color: #0c1321;
 }

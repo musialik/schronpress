@@ -1,7 +1,7 @@
 // Front page
 
 .carousel {
-	margin-top: 2em;
+	margin-top: $gutter*2;
 	background-color: $carousel-color;
 	color: $white;
 	@extend %rounded;
