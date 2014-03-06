@@ -75,7 +75,7 @@ img {
   width: 300px;
 }
 
-.single-thumbnail {
+.carousel-item-img, .single-thumbnail {
   height: 410px;
   width: 700px;
 }
@@ -125,18 +125,45 @@ img {
 }
 
 .carousel {
+  width: 43.75em;
+  float: left;
+}
+
+.carousel-container {
   overflow: hidden;
   *zoom: 1;
+  position: relative;
+  margin-top: 2.5em;
+}
+
+.carousel-item {
+  width: 58.75em;
+  display: block;
+  float: left;
 }
 
 .carousel-item-img {
   width: 38.75em;
+  height: auto;
   float: left;
 }
 
 .carousel-item-content-box {
-  width: 18.75em;
+  width: 19.5em;
   float: right;
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 180px;
+}
+
+.carousel-prev {
+  left: 1.25em;
+}
+
+.carousel-next {
+  right: 21.25em;
 }
 
 .news, .adoptions {
@@ -418,25 +445,20 @@ a:hover {
   font-size: .75em;
 }
 
-.carousel {
-  margin-top: 2.5em;
-  background-color: #263553;
-  color: white;
-}
 .carousel h1, .carousel h2, .carousel h3, .carousel h4, .carousel h5, .carousel h6, .carousel a {
-  color: white;
-}
-.carousel a {
-  text-decoration: underline;
+  font-size: 1.25em;
 }
 
-.carousel-item:not(:first-child) {
-  display: none;
+.carousel-container {
+  background-color: #eff0f4;
+}
+
+.carousel-item-header {
+  margin-top: 2em;
 }
 
 .carousel-item-content {
-  padding: 1.5em;
-  padding-left: .5em;
+  padding: .5em;
 }
 
 .fp-header {
@@ -445,6 +467,7 @@ a:hover {
   margin-top: 2.5em;
   margin-bottom: 1em;
   border-bottom: 1px solid #dddddd;
+  clear: both;
   font-size: 1.125em;
   font-weight: 400;
 }

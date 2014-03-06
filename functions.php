@@ -57,4 +57,13 @@ function the_thumbnail_or_placeholder( $size = 'thumbnail', $class = '' ) {
 }
 
 
+/*
+ * Setup carousel
+ */
+add_action( 'wp_enqueue_scripts', 'carousel_load_scripts' );
+function carousel_load_scripts() {
+    wp_register_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ), '6.2.1', true );
+ 
+    wp_enqueue_script( 'schronpress-carousel', get_template_directory_uri() . '/js/carousel.js', array( 'caroufredsel' ), '', true );
+}
 ?>

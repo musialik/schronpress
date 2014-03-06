@@ -1,28 +1,32 @@
 // Front page
 
+// Carousel
 .carousel {
-	margin-top: $gutter*2;
-	background-color: $carousel-color;
-	color: $white;
-	@extend %rounded;
+	// background-color: $carousel-color;
+	// color: $white;
 
 	h1, h2, h3, h4, h5, h6, a {
-		color: $white;
+		// color: $white;
+		font-size: 1.25em;
 	}
 	a {
-		text-decoration: underline;
+		// text-decoration: underline;
 	}
 }
-.carousel-item {
-	&:not(:first-child) {
-		display: none;
+	.carousel-container {
+		background-color: $sidebar-color;
 	}
-}
-.carousel-item-img {}
-.carousel-item-content {
-	padding: 1.5em;
-	padding-left: .5em;
-}
+	.carousel-item {
+	}
+	.carousel-item-header {
+		margin-top: 2em;
+	}
+	.carousel-item-img {}
+	.carousel-item-content {
+		padding: .5em;
+		// padding-left: .5em;
+	}
+
 
 // Sections' header
 .fp-header {
@@ -30,6 +34,7 @@
 	margin-top: 2.5em;
 	margin-bottom: 1em;
 	@include border-bottom;
+	clear: both;
 	font-size: 1.125em;
 	font-weight: 400;
 	> a {

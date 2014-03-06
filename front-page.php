@@ -2,37 +2,49 @@
 
 <section class="wrapper white">
 
-    <section class="carousel">
+    <?php 
+        // Get sticky posts
+        $sticky = get_option( 'sticky_posts' );
+        // Get top 5 sticky posts
+        $sticky = array_slice( $sticky, 0, 5 );
+        // Query sticky posts
+        $carousel = new WP_Query( array(
+            'post__in' => $sticky,
+            'ignore_sticky_posts' => 1
+        ) );
+    ?>
 
-        <article class="carousel-item">
-            <img src="http://lorempixel.com/620/350/cats/8" alt="" class="carousel-item-img">
-            <section class="carousel-item-content-box">
-                <div class="carousel-item-content">
-                    <h1>Test</h1>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Something more</a>
-                </div>
-            </section>
-        </article>
+    <?php if ( $carousel->have_posts() ) : ?>
 
-        <article class="carousel-item">
-            <img src="http://lorempixel.com/620/350/cats/9" alt="" class="carousel-item-img">
-            <section class="carousel-item-content-box">
-                <div class="carousel-item-content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-            </section>
-        </article>
+        <div class="carousel-container">
+            
 
-        <article class="carousel-item">
-            <img src="http://lorempixel.com/620/350/cats/10" alt="" class="carousel-item-img">
-            <section class="carousel-item-content-box">
-                <div class="carousel-item-content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-            </section>
-        </article>
+            <section class="carousel" id="carousel">
+            
+                <?php while ( $carousel->have_posts() ) : $carousel->the_post() ?>
 
-    </section>
+                    <article class="carousel-item">
+                        <?php the_thumbnail_or_placeholder( 'img-single', 'carousel-item-img' ); ?>
+                        <section class="carousel-item-content-box">
+                            <div class="carousel-item-content">
+                                <h2 class="carousel-item-header"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                                <?php the_excerpt(); ?>
+                            </div>
+                        </section>
+                    </article>
+
+                <?php endwhile; ?>
+
+            </section>          
+
+            <a class="carousel-prev" id="carousel-prev" href="#"><span>wstecz</span></a>
+            <a class="carousel-next" id="carousel-next" href="#"><span>dalej</span></a>
+
+        </div>
+
+        
+
+    <?php endif; ?>
 
 
     <section class="news">

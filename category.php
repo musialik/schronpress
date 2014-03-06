@@ -2,45 +2,45 @@
 
 <section class="wrapper white">
 
-  <section class="content">
+	<section class="content">
 
 		<h1><?php single_cat_title(); ?></h1>
-        
-    <section class="animals">
-	
-	    <?php if ( have_posts() ) : ?>
-  
-			  <?php while ( have_posts() ) : the_post(); ?>
-			    
-			    <article class="animal">
+		
+		<section class="animals">
+		
+			<?php if ( have_posts() ) : ?>
+	  
+				  <?php while ( have_posts() ) : the_post(); ?>
+					
+					<article class="animal">
 
-			      <a href="<?php the_permalink(); ?>" class="box-link">
-			        <div class="overlay"></div>
-			        <div class="box-img-container">
-				        <?php the_thumbnail_or_placeholder( 'img-small', 'animal-img' ); ?>
-			        </div>
-			        <h2 class="box-item-header"><?php the_title(); ?></h2>
-			        <div class="animal-content"><?php the_short_excerpt(); ?></div>
-			      </a>
+						<a href="<?php the_permalink(); ?>" class="box-link">
+							<div class="overlay"></div>
+							<div class="box-img-container">
+								<?php the_thumbnail_or_placeholder( 'img-small', 'animal-img' ); ?>
+							</div>
+							<h2 class="box-item-header"><?php the_title(); ?></h2>
+							<div class="animal-content"><?php the_short_excerpt(); ?></div>
+						</a>
 
-			    </article>
+					</article>
 
-			  <?php endwhile; ?>
-			  
-			  <?php get_template_part( 'partials/_pagination' ); ?>
+				  <?php endwhile; ?>
+				  
+				  <?php get_template_part( 'partials/_pagination' ); ?>
 
-			<?php else : ?>
+				<?php else : ?>
 
-			  Nic nie znaleziono
+				  	Nic nie znaleziono
 
-			<?php endif; ?>
-			
-    </section>
+				<?php endif; ?>
+				
+		</section>
 
   </section>
 
   <?php get_sidebar(); ?>
-    
+	
 </section>
 
 <?php get_footer(); ?> 

@@ -1,8 +1,4 @@
-// All floats and column widths are here
-
-body {
-	// margin: 0 $gutter/2;
-}
+// Wrapper elements
 
 .wrapper {
 	@include clearfix;
@@ -19,6 +15,9 @@ body {
 	padding: 2*$gutter 0;
 }
 
+
+// Content
+
 .content {
 	@include width(9);
 	float: left;
@@ -27,10 +26,16 @@ body {
 	margin-right: .5*$gutter;
 }
 
+
+// Sidebar
+
 .sidebar {
 	@include width(3);
 	float: right;
 }
+
+
+// Footer
 
 .footer-left {
 	@include width(5);
@@ -41,56 +46,89 @@ body {
 	float: right;
 }
 
+
 // Front page
+
 %blocks-in-single-row {
 	&:not(:last-child) {
 		margin-right: $gutter;
 	}
 }
 
+// Carousel
 .carousel {
-	@include clearfix;
-}
-.carousel-item-img {
-	@include width(8);
+	@include width(9);
 	float: left;
 }
-.carousel-item-content-box {
-	@include width(4);
-	float: right;
-}
+	.carousel-container {
+		@include clearfix;
+		position: relative;
+		margin-top: $gutter*2;
+		// margin: $gutter*2 $column/2 0 $column/2;
+		// text-align: center;
+	}
+	.carousel-item {
+		@include width(12);
+		display: block;
+		float: left;
+	}
+	.carousel-item-img {
+		@extend %img-single;
+		@include width(8);
+		height: auto;
+		float: left;
+	}
+	.carousel-item-content-box {
+		@include width(4.15);
+		float: right;
+	}
 
+	// Carousel Navigation
+	%carousel-nav {
+		position: absolute;
+		top: 180px;
+	}
+	.carousel-prev {
+		@extend %carousel-nav;
+		left: $gutter;
+	}
+	.carousel-next {
+		@extend %carousel-nav;
+		right: $column*4 + $gutter*5;
+	} 
+
+// Box elements
 .news, .adoptions {
 	@include clearfix;
 }
-
-.news-item {
-	@include width(4);
-	float: left;
-	@extend %blocks-in-single-row;
-}
-
-.adoptions-item {
-	@include width(3);
-	float: left;
-	@extend %blocks-in-single-row;
-}
+	.news-item {
+		@include width(4);
+		float: left;
+		@extend %blocks-in-single-row;
+	}
+	.adoptions-item {
+		@include width(3);
+		float: left;
+		@extend %blocks-in-single-row;
+	}
 
 .animals {
 	@include clearfix;
 }
-.animal {
-	@include width(3);
-	float: left;
-	margin-top: 1em;
-	margin-bottom: 3em;
-	&:nth-child(3n+1) {
-		clear: left;
+	.animal {
+		@include width(3);
+		float: left;
+		margin-top: 1em;
+		margin-bottom: 3em;
+		&:nth-child(3n+1) {
+			clear: left;
+		}
+		&:not(:nth-child(3n)) {
+			margin-right: $gutter;
+		}
 	}
-	&:not(:nth-child(3n)) {
-		margin-right: $gutter;
-	}
-}
+
+// Pagination
 .pager {
 	@include clearfix;
 	clear: both;
