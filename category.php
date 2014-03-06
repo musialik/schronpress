@@ -14,7 +14,7 @@
 			    
 			    <article class="animal">
 
-			      <a href="<?php the_permalink(); ?>" title="<?php the_title() ?>" class="box-link">
+			      <a href="<?php the_permalink(); ?>" class="box-link">
 			        <div class="overlay"></div>
 			        <div class="box-img-container">
 				        <?php the_thumbnail_or_placeholder( 'img-small', 'animal-img' ); ?>

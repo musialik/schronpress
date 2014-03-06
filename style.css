@@ -158,6 +158,8 @@ img {
 .animal {
   width: 13.75em;
   float: left;
+  margin-top: 1em;
+  margin-bottom: 3em;
 }
 .animal:nth-child(3n+1) {
   clear: left;
@@ -373,9 +375,9 @@ a:hover {
 }
 
 .box-item-header {
-  margin: .1em 0 .2em 0;
-  font-size: 1.0625em;
-  font-weight: 400;
+  margin: .5em 0 .4em 0;
+  font-size: 1.25em;
+  font-weight: 200;
 }
 
 .animal-content, .news-item-content, .adoptions-item-content {
@@ -410,10 +412,6 @@ a:hover {
   clear: both;
   color: #888888;
   font-size: .75em;
-}
-
-.animal-content {
-  margin-bottom: 3em;
 }
 
 .carousel {

@@ -52,7 +52,7 @@
             <?php while ( $aktualnosci->have_posts() ) : $aktualnosci->the_post() ?>
 
                 <article class="news-item">
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="box-link">
+                    <a href="<?php the_permalink(); ?>" class="box-link">
                         <div class="overlay"></div>
                         <div class="box-img-container">
                             <?php the_thumbnail_or_placeholder( 'img-medium', 'news-item-img' ); ?>
@@ -95,7 +95,7 @@
             <?php if ( $category->have_posts() ) : $category->the_post() ?>
 
                     <article class="adoptions-item">
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="box-link">
+                        <a href="<?php the_permalink(); ?>" class="box-link">
                             <div class="overlay"></div>
                             <div class="box-img-container">
                                 <?php the_thumbnail_or_placeholder( 'img-small', 'adoptions-item-img' ); ?>

@@ -6,12 +6,12 @@
 
 add_filter('next_posts_link_attributes', 'next_posts_link_attributes');
 function next_posts_link_attributes() {
-    return 'class="btn-next"';
+	return 'class="btn-next"';
 }
 
 add_filter('previous_posts_link_attributes', 'previous_posts_link_attributes');
 function previous_posts_link_attributes() {
-    return 'class="btn-previous"';
+	return 'class="btn-previous"';
 }
 
 

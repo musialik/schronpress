@@ -56,9 +56,9 @@
 	}
 }
 .box-item-header {
-	margin: .1em 0 .2em 0;
-	font-size: 1.0625em;
-	font-weight: 400;
+	margin: .5em 0 .4em 0;
+	font-size: 1.25em;
+	font-weight: 200;
 }
 %box-item-content {
 	font-size: .8125em;
@@ -118,5 +118,4 @@
 }
 .animal-content {
 	@extend %box-item-content;
-	margin-bottom: 3em;
 }
