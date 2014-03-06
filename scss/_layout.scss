@@ -1,22 +1,22 @@
 // All floats and column widths are here
 
 body {
-  // margin: 0 $gutter/2;
+	// margin: 0 $gutter/2;
 }
 
 .wrapper {
 	@include clearfix;
-  margin: auto;
-  padding: 0 0+$gutter/2;
-  @include width(12);
+	margin: auto;
+	padding: 0 0+$gutter/2;
+	@include width(12);
 
-  &.white {
+	&.white {
 		padding: 0 2*$gutter $gutter 2*$gutter;
-  }
+	}
 }
 .content-bg {
 	margin-bottom: 1.5*$gutter;
-  padding: 1.5*$gutter 0;
+	padding: 1.5*$gutter 0;
 }
 
 .content {

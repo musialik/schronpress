@@ -286,6 +286,42 @@ a:hover {
   position: absolute;
 }
 
+.pager {
+  font-size: .875em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.pager-page {
+  display: inline-block;
+  width: 6em;
+  padding: .5em .75em;
+}
+
+.btn-previous, .btn-next {
+  padding: .5em .75em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #6d93b8;
+  border-bottom: 2px solid #43688b;
+  color: white;
+}
+.btn-previous:hover, .btn-next:hover {
+  text-decoration: none;
+  background-color: #5581ac;
+}
+
+.btn-previous {
+  float: left;
+}
+
+.btn-next {
+  float: right;
+}
+
 .content-bg {
   background-color: whitesmoke;
 }
@@ -361,42 +397,6 @@ a:hover {
   float: left;
   clear: both;
   margin-right: 1em;
-}
-
-.pager {
-  font-size: .875em;
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-.pager-page {
-  display: inline-block;
-  width: 6em;
-  padding: .5em .75em;
-}
-
-.btn-previous, .btn-next {
-  padding: .5em .75em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #6d93b8;
-  border-bottom: 2px solid #43688b;
-  color: white;
-}
-.btn-previous:hover, .btn-next:hover {
-  text-decoration: none;
-  background-color: #5581ac;
-}
-
-.btn-previous {
-  float: left;
-}
-
-.btn-next {
-  float: right;
 }
 
 .entry {

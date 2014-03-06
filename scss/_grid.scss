@@ -7,11 +7,11 @@ $gutter: 20px / $em;
 
 // Column widths in ems
 @mixin width ($cols:1) {
-    width: ($cols * ($column + $gutter) - $gutter);
+	width: ($cols * ($column + $gutter) - $gutter);
 }
 
 // Breakpoints
 @mixin breakpoint($cols) {
-    @media (min-width: ($cols * ($column + $gutter) + $gutter )) { @content; }
-    // + $gutter because of body margin
+	@media (min-width: ($cols * ($column + $gutter) + $gutter )) { @content; }
+	// + $gutter because of body margin
 }
