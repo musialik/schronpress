@@ -13,9 +13,7 @@
 					<h1><?php the_title() ?></h1>
 
 					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="box-img-container">
-							<?php the_post_thumbnail( 'img-single', array( 'class' => 'single-thumbnail' ) ); ?>
-						</div>
+						<?php the_post_thumbnail( 'img-single', array( 'class' => 'single-thumbnail' ) ); ?>
 					<?php endif; ?>
 
 					<?php the_content(); ?>

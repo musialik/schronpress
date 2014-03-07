@@ -1,25 +1,11 @@
 // Front page
 
-// // Carousel
+// Carousel
 .carousel {
-	// background-color: $carousel-color;
-	// color: $white;
-
-// 	h1, h2, h3, h4, h5, h6, a {
-// 		// color: $white;
-// 		font-size: 1.25em;
-// 	}
 	a {
 		color: inherit;
 	}
 }
-// 	.carousel-container {
-// 		background-color: $sidebar-color;
-// 	}
-// 	.carousel-item {
-// 	}
-// 	.carousel-item-img {
-// 	}
 	.carousel-item-content-box {
 		padding: .25em .5em .5em .5em;
 		background-color: fade-out($white, .3);
