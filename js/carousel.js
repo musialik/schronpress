@@ -8,8 +8,8 @@ jQuery(document).ready(function($) {
         direction: 'left',
         items: {
             visible: 1,
-            width: 940,
-            height: 363
+            // width: 940,
+            // height: 363
         },
         align: "center",
         scroll : {

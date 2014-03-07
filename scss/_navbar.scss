@@ -43,6 +43,7 @@
 	}
 
 	> ul > li:hover > ul {
+		z-index: 999999;
 		@extend .navbar-bg;
 		display: block;
 		position: absolute;

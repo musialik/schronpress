@@ -75,7 +75,7 @@ img {
   width: 300px;
 }
 
-.carousel-item-img, .single-thumbnail {
+.single-thumbnail {
   height: 410px;
   width: 700px;
 }
@@ -124,46 +124,53 @@ img {
   margin-right: 1.25em;
 }
 
-.carousel {
+.carousel-border {
+  overflow: hidden;
+  *zoom: 1;
   width: 43.75em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   float: left;
+  border: 1px solid #888888;
 }
 
 .carousel-container {
   overflow: hidden;
   *zoom: 1;
-  position: relative;
   margin-top: 2.5em;
 }
 
 .carousel-item {
-  width: 58.75em;
+  width: 43.75em;
   display: block;
+  position: relative;
   float: left;
 }
 
 .carousel-item-img {
-  width: 38.75em;
-  height: auto;
-  float: left;
+  display: block;
 }
 
 .carousel-item-content-box {
-  width: 19.5em;
-  float: right;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 
 .carousel-prev, .carousel-next {
-  position: absolute;
-  top: 11em;
+  width: 6.25em;
+  margin-top: 12em;
+  float: left;
+  text-align: center;
 }
 
 .carousel-prev {
-  left: 1.25em;
+  margin-right: 1.25em;
 }
 
 .carousel-next {
-  right: 21.25em;
+  margin-left: 1.25em;
 }
 
 .news, .adoptions {
@@ -277,6 +284,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.carousel-prev i, .carousel-next i {
+  font-family: 'dashicons';
+  font-weight: normal;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+}
+
 .navbar-bg, .navbar > ul > li:hover > ul {
   background-color: #263553;
   color: #fff;
@@ -315,6 +329,7 @@ a:hover {
   display: block;
 }
 .navbar > ul > li:hover > ul {
+  z-index: 999999;
   display: block;
   position: absolute;
 }
@@ -411,7 +426,7 @@ a:hover {
   font-weight: 200;
 }
 
-.animal-content, .news-item-content, .adoptions-item-content {
+.animal-content, .carousel-item-content, .news-item-content, .adoptions-item-content {
   font-size: .8125em;
   line-height: 1.4em;
   overflow: hidden;
@@ -445,20 +460,42 @@ a:hover {
   font-size: .75em;
 }
 
-.carousel h1, .carousel h2, .carousel h3, .carousel h4, .carousel h5, .carousel h6, .carousel a {
-  font-size: 1.25em;
+.carousel a {
+  color: inherit;
 }
 
-.carousel-container {
-  background-color: #eff0f4;
+.carousel-item-content-box {
+  padding: .25em .5em .5em .5em;
+  background-color: rgba(255, 255, 255, 0.7);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.7)), color-stop(100%, rgba(255, 255, 255, 0.9)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.9));
 }
 
 .carousel-item-header {
-  margin-top: 2em;
+  margin: 0 0 .1em 0;
+  font-size: 1.35em;
+  font-weight: 200;
 }
 
-.carousel-item-content {
-  padding: .5em;
+.carousel-prev, .carousel-next {
+  color: #888888;
+}
+.carousel-prev i, .carousel-next i {
+  font-size: 5em;
+}
+.carousel-prev:hover, .carousel-next:hover {
+  color: #444444;
+}
+
+.carousel-prev i:before {
+  content: "\f341";
+}
+
+.carousel-next i:before {
+  content: "\f345";
 }
 
 .fp-header {

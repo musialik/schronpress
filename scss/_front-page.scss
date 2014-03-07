@@ -1,32 +1,56 @@
 // Front page
 
-// Carousel
+// // Carousel
 .carousel {
 	// background-color: $carousel-color;
 	// color: $white;
 
-	h1, h2, h3, h4, h5, h6, a {
-		// color: $white;
-		font-size: 1.25em;
-	}
+// 	h1, h2, h3, h4, h5, h6, a {
+// 		// color: $white;
+// 		font-size: 1.25em;
+// 	}
 	a {
-		// text-decoration: underline;
+		color: inherit;
 	}
 }
-	.carousel-container {
-		background-color: $sidebar-color;
-	}
-	.carousel-item {
+// 	.carousel-container {
+// 		background-color: $sidebar-color;
+// 	}
+// 	.carousel-item {
+// 	}
+// 	.carousel-item-img {
+// 	}
+	.carousel-item-content-box {
+		padding: .25em .5em .5em .5em;
+		background-color: fade-out($white, .3);
+		@include background(linear-gradient(top, fade-out($white, .3), fade-out($white, .1)))
 	}
 	.carousel-item-header {
-		margin-top: 2em;
+		margin: 0 0 .1em 0;
+		font-size: 1.35em;
+		font-weight: 200;
 	}
-	.carousel-item-img {
-	}
+
 	.carousel-item-content {
-		padding: .5em;
-		// padding-left: .5em;
+		@extend %box-item-content;
 	}
+	%carousel-nav {
+		color: $medium-grey;
+		i {
+			@extend %dashicon;
+			font-size: 5em;	
+		}
+		&:hover {
+			color: $dark-grey;
+		}
+	}
+	.carousel-prev i:before {
+		content: "\f341";
+	}
+	.carousel-next i:before {
+		content: "\f345";
+	}
+	
 
 
 // Sections' header

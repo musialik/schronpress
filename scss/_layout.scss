@@ -57,44 +57,47 @@
 
 // Carousel
 .carousel {
-	@include width(9);
-	float: left;
 }
+	.carousel-border {
+		@include clearfix;
+		@include width(9);
+		@include box-sizing(border-box);
+		float: left;
+		border: 1px solid $medium-grey;
+	}
 	.carousel-container {
 		@include clearfix;
-		position: relative;
 		margin-top: $gutter*2;
-		// margin: $gutter*2 $column/2 0 $column/2;
-		// text-align: center;
 	}
 	.carousel-item {
-		@include width(12);
+		@include width(9);
 		display: block;
+		position: relative;
 		float: left;
 	}
 	.carousel-item-img {
-		@extend %img-single;
-		@include width(8);
-		height: auto;
-		float: left;
+		display: block;
 	}
 	.carousel-item-content-box {
-		@include width(4.15);
-		float: right;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
 	}
 
 	// Carousel Navigation
 	%carousel-nav {
-		position: absolute;
-		top: 11em;
+		@include width(1.5);
+		margin-top: 12em;
+		float: left;
+		text-align: center;
 	}
 	.carousel-prev {
 		@extend %carousel-nav;
-		left: $gutter;
+		margin-right: $gutter;
 	}
 	.carousel-next {
 		@extend %carousel-nav;
-		right: $column*4 + $gutter*5;
+		margin-left: $gutter;
 	} 
 
 // Box elements

@@ -45,7 +45,7 @@ function schronpress_setup() {
 
 
 /*
- * Alternative thumbnail tag (DRY)
+ * Alternative thumbnail tag (to keep things DRY)
  */
 function the_thumbnail_or_placeholder( $size = 'thumbnail', $class = '' ) {
 	global $post;
@@ -58,12 +58,15 @@ function the_thumbnail_or_placeholder( $size = 'thumbnail', $class = '' ) {
 
 
 /*
- * Setup carousel
+ * Load theme scripts and stylesheets
  */
-add_action( 'wp_enqueue_scripts', 'carousel_load_scripts' );
-function carousel_load_scripts() {
+add_action( 'wp_enqueue_scripts', 'schronpress_scripts' );
+function schronpress_scripts() {
+	// Main stylesheet. Use wp's dashicons
+    wp_enqueue_style( 'schronpress-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
+
+    // Carousel
     wp_register_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ), '6.2.1', true );
- 
     wp_enqueue_script( 'schronpress-carousel', get_template_directory_uri() . '/js/carousel.js', array( 'caroufredsel' ), '', true );
 }
 ?>
