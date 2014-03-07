@@ -155,7 +155,7 @@ img {
 
 .carousel-prev, .carousel-next {
   position: absolute;
-  top: 180px;
+  top: 11em;
 }
 
 .carousel-prev {

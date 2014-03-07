@@ -6,7 +6,11 @@ jQuery(document).ready(function($) {
         	timeoutDuration: 4000,
         },
         direction: 'left',
-        items: 1,
+        items: {
+            visible: 1,
+            width: 940,
+            height: 363
+        },
         align: "center",
         scroll : {
             items           : 1,
