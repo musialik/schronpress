@@ -4,7 +4,7 @@
 
 	<section class="content">
 
-		<h1><?php single_cat_title(); ?></h1>
+		<h1 class="page-header"><?php single_cat_title(); ?></h1>
 		
 		<section class="animals">
 		

@@ -20,13 +20,14 @@ h1, h2, h3, h4, h5, h6 {
 		text-decoration: none;
 		&:hover {
 			text-decoration: none;
+			color: lighten($dark-grey, 15%);
 		}
 	}
 }
 
 // Set header font sizes
 h1 {
-	font-size: 2.25em;
+	font-size: 2.35em;
 }
 h2 {
 	font-size: 1.8em;
@@ -46,7 +47,7 @@ h6 {
 
 // Set vertical rythm
 p, ul, ol {
-	margin-bottom: 1em;
+	@include margin-bottom;
 }
 
 // Remove bottom margin for nested lists

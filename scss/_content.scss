@@ -6,8 +6,8 @@
 }
 
 .page-header {
-	@include border-bottom;
-	margin-bottom: 1em;
+	// @include border-bottom;
+	@include margin-bottom(1);
 }
 
 
@@ -47,7 +47,7 @@
 	}
 }
 .box-img-container {
-	border: 1px solid $medium-grey;
+	@include border;
 	overflow: hidden;
 	// @include border-radius(3px);
 	img { 
@@ -75,7 +75,7 @@
 .content {
 	img {
 		@extend %rounded;
-		// margin-bottom: 1em;
+		// @include margin-bottom;
 		// max-width: 100%;
 		// height: auto;
 	}
@@ -84,17 +84,15 @@
 	background-color: $light-grey;
 }
 .single-thumbnail {
-	@extend %img-single;
+	// @extend %img-single;
 	clear: both;
-	margin-bottom: 1em;
+	@include margin-bottom;
 	max-width: 100%;
 	height: auto;
 }
 .index-thumbnail {
 	@extend %img-small;
-	float: left;
-	clear: both;
-	margin-right: 1em;
+	@include border;
 }
 
 
@@ -102,15 +100,46 @@
 
 .entry {
 	// margin-bottom: 2em;
-	@include border-bottom;
+	// @include border-bottom;
 	@include clearfix;
+	@include margin-bottom(2.5);
 }
-.meta {
-	margin-top: 1em;
-	clear: both;
-	color: $medium-grey;
+.entry-title {
+	margin-top: .5em;
+	@include margin-bottom(1);
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		line-height: 1.25em;
+	}
+	h2 {
+		// font-size: 2.2em;
+	}
+}
+.single-entry-title {
+	@extend .entry-title;
+	margin-top: 2em;
+	@include margin-bottom(2);
+}
+%entry-meta {
 	font-size: .75em;
+	text-transform: uppercase;
 }
+.meta-category {
+	@extend %entry-meta;
+}
+.meta-date {
+	@extend %entry-meta;
+	color: $medium-grey;
+}
+// .meta {
+// 	margin-top: 1em;
+// 	margin-bottom: 2em;
+// 	padding: .15em .35em;
+// 	clear: both;
+// 	// color: $medium-grey;
+// 	background-color: $sidebar-color;
+// 	font-size: .75em;
+// }
 
 
 // Category
@@ -130,12 +159,12 @@
 %wp-image-align {
 	max-width: 100%;
 	height: auto;
-	// margin-bottom: 1em;	
+	// @include margin-bottom;	
 }
 
 img%wp-image-extra-margin {
 	// when image is without a wp-caption
-	margin-bottom: 1em;
+	@include margin-bottom;
 }
 
 .alignnone {
@@ -175,7 +204,7 @@ img%wp-image-extra-margin {
 
 .wp-caption {
 	// Vertical rythm
-	margin-bottom: 1em;
+	@include margin-bottom;
 }
 
 .wp-caption-text {

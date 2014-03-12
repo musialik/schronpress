@@ -10,7 +10,11 @@
                 
                 <article class="entry">
     
-                    <h1><?php the_title() ?></h1>
+                    <div class="single-entry-title">
+                        <span class="meta-category"><?php echo the_category(', '); ?></span>
+                        <h1><?php the_title() ?></h1>
+                        <span class="meta-date"><?php echo get_the_date('j F Y'); ?></span>
+                    </div>
 
                     <?php if ( has_post_thumbnail() ) : ?>
                         <?php the_post_thumbnail( 'img-single', array( 'class' => 'single-thumbnail' ) ); ?>

@@ -64,7 +64,6 @@
 		@include box-sizing(border-box);
 		position: relative;
 		float: left;
-		border: 1px solid $medium-grey;
 	}
 	.carousel-container {
 		@include clearfix;
@@ -122,8 +121,7 @@
 	.animal {
 		@include width(3);
 		float: left;
-		margin-top: 1em;
-		margin-bottom: 3em;
+		margin-bottom: 4em;
 		&:nth-child(3n+1) {
 			clear: left;
 		}

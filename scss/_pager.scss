@@ -1,11 +1,11 @@
 .pager {
   font-size: .875em;
-  margin-bottom: 1em;
+  @include margin-bottom;
   text-align: center;
 }
 .pager-page {
   display: inline-block;
-  width: 6em;
+  width: 10em;
   padding: .5em .75em;
 }
 %btn-pager {

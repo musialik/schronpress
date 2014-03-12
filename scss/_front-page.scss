@@ -10,6 +10,9 @@
 		}
 	}
 }
+	.carousel-border {
+		@include border;
+	}
 	.carousel-item-content-box {
 		padding: .25em .5em .5em .5em;
 		background-color: fade-out($white, .3);
@@ -52,7 +55,7 @@
 .fp-header {
 	@include clearfix;
 	margin-top: 2.5em;
-	margin-bottom: 1em;
+	@include margin-bottom;
 	@include border-bottom;
 	clear: both;
 	font-size: 1.125em;

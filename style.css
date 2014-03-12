@@ -75,11 +75,6 @@ img {
   width: 300px;
 }
 
-.single-thumbnail {
-  height: 410px;
-  width: 700px;
-}
-
 .wrapper {
   overflow: hidden;
   *zoom: 1;
@@ -133,7 +128,6 @@ img {
   box-sizing: border-box;
   position: relative;
   float: left;
-  border: 1px solid #888888;
 }
 
 .carousel-container {
@@ -197,8 +191,7 @@ img {
 .animal {
   width: 13.75em;
   float: left;
-  margin-top: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 .animal:nth-child(3n+1) {
   clear: left;
@@ -231,10 +224,11 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   text-decoration: none;
+  color: #6a6a6a;
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2.35em;
 }
 
 h2 {
@@ -258,7 +252,7 @@ h6 {
 }
 
 p, ul, ol {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 ul ul, ol ol, ol ul, ul ol {
@@ -337,13 +331,13 @@ a:hover {
 
 .pager {
   font-size: .875em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   text-align: center;
 }
 
 .pager-page {
   display: inline-block;
-  width: 6em;
+  width: 10em;
   padding: .5em .75em;
 }
 
@@ -380,7 +374,6 @@ a:hover {
 }
 
 .page-header {
-  border-bottom: 1px solid #dddddd;
   margin-bottom: 1em;
 }
 
@@ -439,28 +432,42 @@ a:hover {
 
 .single-thumbnail {
   clear: both;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   max-width: 100%;
   height: auto;
 }
 
 .index-thumbnail {
-  float: left;
-  clear: both;
-  margin-right: 1em;
+  border: 1px solid #888888;
 }
 
 .entry {
-  border-bottom: 1px solid #dddddd;
   overflow: hidden;
   *zoom: 1;
+  margin-bottom: 2.5em;
 }
 
-.meta {
-  margin-top: 1em;
-  clear: both;
-  color: #888888;
+.entry-title, .single-entry-title {
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+.entry-title h1, .single-entry-title h1, .entry-title h2, .single-entry-title h2, .entry-title h3, .single-entry-title h3, .entry-title h4, .single-entry-title h4, .entry-title h5, .single-entry-title h5, .entry-title h6, .single-entry-title h6 {
+  margin: 0;
+  line-height: 1.25em;
+}
+
+.single-entry-title {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.meta-category, .meta-date {
   font-size: .75em;
+  text-transform: uppercase;
+}
+
+.meta-date {
+  color: #888888;
 }
 
 .alignnone, .alignleft, .alignright, .aligncenter, .wp-caption img {
@@ -469,7 +476,7 @@ a:hover {
 }
 
 img.alignleft, img.alignright {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .alignleft {
@@ -498,7 +505,7 @@ img.alignleft, img.alignright {
 }
 
 .wp-caption {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 .wp-caption-text {
@@ -514,6 +521,10 @@ img.alignleft, img.alignright {
 }
 .carousel a:hover {
   text-decoration: none;
+}
+
+.carousel-border {
+  border: 1px solid #888888;
 }
 
 .carousel-item-content-box {
@@ -558,7 +569,7 @@ img.alignleft, img.alignright {
   overflow: hidden;
   *zoom: 1;
   margin-top: 2.5em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   border-bottom: 1px solid #dddddd;
   clear: both;
   font-size: 1.125em;
@@ -602,14 +613,15 @@ img.alignleft, img.alignright {
 .sidebar-widget.alt-bg {
   background-color: #fff2df;
 }
+.sidebar-widget li {
+  margin: 0;
+  line-height: 1.3em;
+  padding: .15em 0;
+}
 
 .sidebar-header {
   margin: 0;
   font-size: 1em;
-}
-
-.sidebar-content {
-  margin: 0;
 }
 
 .footer-bg {

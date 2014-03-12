@@ -16,12 +16,16 @@ function previous_posts_link_attributes() {
 
 
 /*
- * Short excerpt tag
+ * Custom template tags
  */
 function the_short_excerpt( $number_of_words = 10 ) {
 	global $post;
 	echo implode( ' ', array_slice( explode( ' ', get_the_excerpt() ), 0, $number_of_words ) );
 	echo ' [...]';
+}
+function total_pages() {
+	global $wp_query;
+	echo $wp_query->max_num_pages;
 }
 
 
