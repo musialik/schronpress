@@ -87,6 +87,8 @@
 	@extend %img-single;
 	clear: both;
 	margin-bottom: 1em;
+	max-width: 100%;
+	height: auto;
 }
 .index-thumbnail {
 	@extend %img-small;

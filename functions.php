@@ -25,7 +25,6 @@ function the_short_excerpt( $number_of_words = 10 ) {
 }
 
 
-
 /*
  * Setup theme
  */
@@ -41,6 +40,16 @@ function schronpress_setup() {
 	/* Menus */
 	register_nav_menu( 'navbar', 'Menu górne' );
 
+	register_sidebar( array(
+		'name'          => __( 'Pasek Boczny', 'schronpress_textdomain' ),
+		'id'            => 'sidebar-right',
+		'description'   => '',
+        'class'         => 'sidebar',
+		'before_widget' => '<aside id="%1$s" class="sidebar-widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="sidebar-header">',
+		'after_title'   => '</h4>' 
+	) );
 }
 
 
