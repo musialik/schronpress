@@ -78,4 +78,34 @@ function schronpress_scripts() {
     wp_register_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ), '6.2.1', true );
     wp_enqueue_script( 'schronpress-carousel', get_template_directory_uri() . '/js/carousel.js', array( 'caroufredsel' ), '', true );
 }
+
+
+/*
+ * Remove 10px margin from wp-caption and use html 5 tags for caption
+ */
+add_filter('img_caption_shortcode', 'my_img_caption_shortcode_filter',10,3);
+
+function my_img_caption_shortcode_filter( $val, $attr, $content = null )
+{
+	extract(shortcode_atts( array (
+		'id'	=> '',
+		'align'	=> 'aligncenter',
+		'width'	=> '',
+		'caption' => ''
+	), $attr ) );
+	
+	if ( 1 > (int) $width || empty($caption) )
+		return $val;
+
+	$capid = '';
+	if ( $id ) {
+		$id = esc_attr($id);
+		$capid = 'id="figcaption_'. $id . '" ';
+		$id = 'id="' . $id . '" aria-labelledby="figcaption_' . $id . '" ';
+	}
+
+	return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: '
+	. (int) $width . 'px">' . do_shortcode( $content ) . '<figcaption ' . $capid 
+	. 'class="wp-caption-text">' . $caption . '</figcaption></figure>';
+}
 ?>

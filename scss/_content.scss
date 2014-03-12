@@ -123,3 +123,64 @@
 .animal-content {
 	@extend %box-item-content;
 }
+
+
+// Wp image alignments and captions
+
+%wp-image-align {
+	max-width: 100%;
+	height: auto;
+	// margin-bottom: 1em;	
+}
+
+img%wp-image-extra-margin {
+	// when image is without a wp-caption
+	margin-bottom: 1em;
+}
+
+.alignnone {
+	@extend %wp-image-align;
+}
+
+.alignleft {
+	@extend %wp-image-align;
+	@extend %wp-image-extra-margin;
+	margin-right: 1em;
+	float: left;
+	img {
+		float: left;
+	}
+}
+
+.alignright {
+	@extend %wp-image-align;
+	@extend %wp-image-extra-margin;
+	margin-left: 1em;
+	float: right;
+	img {
+		float: right;
+	}
+}
+
+.aligncenter {
+	@extend %wp-image-align;
+	display: block;
+	margin: auto;
+}
+
+.wp-caption img {
+	@extend %wp-image-align;
+	display: block;
+}
+
+.wp-caption {
+	// Vertical rythm
+	margin-bottom: 1em;
+}
+
+.wp-caption-text {
+	font-size: .9em;
+	color: $medium-grey;
+	font-style: italic;
+	text-align: center;
+}
