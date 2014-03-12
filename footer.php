@@ -1,27 +1,27 @@
-    </div> <!-- .content-bg -->
-    
-    <section class="footer-bg">
-      <footer class="wrapper footer">
+		</div> <!-- .content-bg -->
 
-        <aside class="footer-widget footer-left">
-          <h4 class="footer-header">Szukaj</h4>
-          <section class="footer-content">
-            <p>Przeszukaj wszystkie podstrony, aktualności i zwierzęta.</p>
-            <form action="/" method="GET">
-              <input type="search" name="s" class="search-footer">
-              <input type="submit" class="btn-footer" value="Szukaj">
-            </form>  
-          </section>
-        </aside>
+		<section class="footer-bg">
+			<footer class="wrapper footer">
 
-        <aside class="footer-widget footer-right">
-          <h4 class="footer-header">Facebook</h4>
-          <p class="footer-content">Już prawie 5000 osób wspiera nas na facebooku! Dziękujemy.</p>
-        </aside>
+				<aside class="footer-widget footer-left">
+					<h4 class="footer-header">Szukaj</h4>
+					<section class="footer-content">
+						<p>Przeszukaj wszystkie podstrony, aktualności i zwierzęta.</p>
+						<form action="/" method="GET">
+							<input type="search" name="s" class="search-footer">
+							<input type="submit" class="btn-footer" value="Szukaj">
+						</form>
+					</section>
+				</aside>
 
-      </footer>
-    </section>
+				<aside class="footer-widget footer-right">
+					<h4 class="footer-header">Facebook</h4>
+					<p class="footer-content">Już prawie 5000 osób wspiera nas na facebooku! Dziękujemy.</p>
+				</aside>
 
-  <?php wp_footer(); ?>
-  </body>
+			</footer>
+		</section>
+
+	<?php wp_footer(); ?>
+	</body>
 </html>

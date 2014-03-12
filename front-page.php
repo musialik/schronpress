@@ -2,7 +2,7 @@
 
 <section class="wrapper white">
 
-	<?php 
+	<?php
 		// Get sticky posts
 		$sticky = get_option( 'sticky_posts' );
 		// Get top 5 sticky posts
@@ -24,7 +24,7 @@
 				<a class="carousel-next" id="carousel-next" href="#"><i> </i></a>
 
 				<section class="carousel" id="carousel">
-			
+
 					<?php while ( $carousel->have_posts() ) : $carousel->the_post() ?>
 
 						<article class="carousel-item">
@@ -41,7 +41,7 @@
 
 					<?php endwhile; ?>
 
-				</section>    
+				</section>
 
 			</div>
 
@@ -55,7 +55,7 @@
 		<?php $news_url = get_category_link( get_cat_ID( 'aktualnosci' ) ); ?>
 		<h2 class="fp-header">Aktualności <a href="<?php echo $news_url; ?>">Przeglądaj wszystkie</a></h2>
 
-		<?php 
+		<?php
 			$aktualnosci = new WP_Query( array(
 				'category_name' => 'aktualnosci',
 				'ignore_sticky_posts' => 1,
@@ -79,7 +79,7 @@
 
 			<?php endwhile; ?>
 		<?php endif; ?>
-		
+
 	</section>
 
 
@@ -87,11 +87,11 @@
 
 		<h2 class="fp-header">Zwierzęta do adopcji</h2>
 
-		<?php 
+		<?php
 			/*
 			 * Display latest post from each of the adoption categories
 			 */
-			$categories = array( 
+			$categories = array(
 				'psy' => 'psy do adopcji',
 				'szczeniaki' => 'szczeniaki',
 				'koty' => 'koty do adopcji',
@@ -132,4 +132,4 @@
 
 </section>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

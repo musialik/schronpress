@@ -52,7 +52,7 @@ function schronpress_setup() {
 		'before_widget' => '<aside id="%1$s" class="sidebar-widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h4 class="sidebar-header">',
-		'after_title'   => '</h4>' 
+		'after_title'   => '</h4>'
 	) );
 
 	/*
@@ -60,7 +60,7 @@ function schronpress_setup() {
 	 * Ugly hack to make all gallery images link to image file, not attachment
 	 * - this is to make sure that lightbox galleries don't break.
 	 */
-	require_once( 'includes/gallery_shortcode.php' );
+	require_once( 'lib/shortcodes/gallery.php' );
 }
 
 
@@ -85,9 +85,11 @@ function schronpress_scripts() {
 	// Main stylesheet. Use wp's dashicons
     wp_enqueue_style( 'schronpress-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
 
-    // Carousel
-    wp_register_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array( 'jquery' ), '6.2.1', true );
-    wp_enqueue_script( 'schronpress-carousel', get_template_directory_uri() . '/js/carousel.js', array( 'caroufredsel' ), '', true );
+    // Javascript
+    wp_register_script( 'schronpress-pluginsjs', get_template_directory_uri() . '/assets/js/plugins.min.js',
+    					array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'schronpress-mainjs', get_template_directory_uri() . '/assets/js/main.min.js',
+    					array( 'schronpress-pluginsjs' ), '1.0.0', true );
 }
 
 
@@ -104,7 +106,7 @@ function my_img_caption_shortcode_filter( $val, $attr, $content = null )
 		'width'	=> '',
 		'caption' => ''
 	), $attr ) );
-	
+
 	if ( 1 > (int) $width || empty($caption) )
 		return $val;
 
@@ -116,7 +118,7 @@ function my_img_caption_shortcode_filter( $val, $attr, $content = null )
 	}
 
 	return '<figure ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: '
-	. (int) $width . 'px">' . do_shortcode( $content ) . '<figcaption ' . $capid 
+	. (int) $width . 'px">' . do_shortcode( $content ) . '<figcaption ' . $capid
 	. 'class="wp-caption-text">' . $caption . '</figcaption></figure>';
 }
 ?>

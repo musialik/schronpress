@@ -5,11 +5,11 @@
     <section class="content">
 
         <?php if ( have_posts() ) : ?>
-    
+
             <?php while ( have_posts() ) : the_post(); ?>
-                
+
                 <article class="entry">
-    
+
                     <div class="single-entry-title">
                         <span class="meta-category"><?php echo the_category(', '); ?></span>
                         <h1><?php the_title() ?></h1>
@@ -27,8 +27,8 @@
                 </article>
 
             <?php endwhile; ?>
-            
-            <?php get_template_part( 'partials/_pagination' ); ?>
+
+            <?php get_template_part( 'lib/partials/_pagination' ); ?>
 
         <?php else : ?>
 
@@ -39,7 +39,7 @@
     </section>
 
     <?php get_sidebar(); ?>
-        
+
 </section>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

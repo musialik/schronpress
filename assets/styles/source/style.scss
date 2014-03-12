@@ -14,15 +14,15 @@ img {
 @import 'compass/utilities/general/clearfix';
 @import 'compass/css3';
 
-@import 'variables';
-@import 'grid';
-@import 'layout';
-@import 'text';
+@import 'partials/variables';
+@import 'partials/grid';
+@import 'partials/layout';
+@import 'partials/text';
 
-@import 'navbar';
-@import 'pager';
-@import 'content';
-@import 'front-page';
-@import 'sidebar';
-@import 'footer';
+@import 'partials/navbar';
+@import 'partials/pager';
+@import 'partials/content';
+@import 'partials/front-page';
+@import 'partials/sidebar';
+@import 'partials/footer';
 

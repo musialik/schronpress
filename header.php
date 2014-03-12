@@ -13,10 +13,10 @@
 
     <header class="wrapper">
       <a href="<?php bloginfo( 'url' ); ?>">
-        <img src="<?php echo $template_url; ?>/img/otoz-animals-oswiecim-logo.png" alt="OTOZ Animals Oświęcim logo">
+        <img src="<?php echo $template_url; ?>/assets/images/otoz-animals-oswiecim-logo.png" alt="OTOZ Animals Oświęcim logo">
       </a>
     </header>
 
-    <?php get_template_part( 'partials/_navbar' ); ?>
+    <?php get_template_part( 'lib/partials/_navbar' ); ?>
 
     <div class="content-bg">

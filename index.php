@@ -5,9 +5,9 @@
 	<section class="content">
 
 		<?php if ( have_posts() ) : ?>
-	
+
 			<?php while ( have_posts() ) : the_post(); ?>
-				
+
 				<article class="entry">
 
 					<div class="entry-title">
@@ -34,8 +34,8 @@
 				</article>
 
 			<?php endwhile; ?>
-			
-			<?php get_template_part( 'partials/_pagination' ); ?>
+
+			<?php get_template_part( 'lib/partials/_pagination' ); ?>
 
 		<?php else : ?>
 
@@ -46,7 +46,7 @@
 	</section>
 
 	<?php get_sidebar(); ?>
-		
+
 </section>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>
