@@ -18,31 +18,32 @@
 
 		<div class="carousel-container">
 
-			<a class="carousel-prev" id="carousel-prev" href="#"><i></i></a>
-
 			<div class="carousel-border">
+
+				<a class="carousel-prev" id="carousel-prev" href="#"><i> </i></a>
+				<a class="carousel-next" id="carousel-next" href="#"><i> </i></a>
+
 				<section class="carousel" id="carousel">
 			
 					<?php while ( $carousel->have_posts() ) : $carousel->the_post() ?>
 
 						<article class="carousel-item">
-							<a href="<?php the_permalink(); ?>">
 							<?php the_thumbnail_or_placeholder( 'img-single', 'carousel-item-img' ); ?>
 							<section class="carousel-item-content-box">
-								<h2 class="carousel-item-header"><?php the_title(); ?></h2>
-								<div class="carousel-item-content">
-									<?php the_short_excerpt(); ?>
-								</div>
+								<a href="<?php the_permalink(); ?>">
+									<h2 class="carousel-item-header"><?php the_title(); ?></h2>
+									<div class="carousel-item-content">
+										<?php the_short_excerpt(); ?>
+									</div>
+								</a>
 							</section>
-							</a>
 						</article>
 
 					<?php endwhile; ?>
 
-				</section>       
-			</div>
+				</section>    
 
-			<a class="carousel-next" id="carousel-next" href="#"><i></i></a>
+			</div>
 
 		</div>
 

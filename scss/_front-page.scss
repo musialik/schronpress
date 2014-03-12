@@ -4,12 +4,16 @@
 .carousel {
 	a {
 		color: inherit;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 	.carousel-item-content-box {
 		padding: .25em .5em .5em .5em;
 		background-color: fade-out($white, .3);
-		@include background(linear-gradient(top, fade-out($white, .3), fade-out($white, .1)))
+		@include background(linear-gradient(top, fade-out($white, .4), fade-out($white, .1)))
 	}
 	.carousel-item-header {
 		margin: 0 0 .1em 0;
@@ -24,10 +28,15 @@
 		color: $medium-grey;
 		i {
 			@extend %dashicon;
-			font-size: 5em;	
+			// padding: .35em .2em;
+			font-size: 3em;	
+			text-align: center;
+			&:before {
+				line-height: 1em;
+			}
 		}
 		&:hover {
-			color: $dark-grey;
+			color: $light-grey;
 		}
 	}
 	.carousel-prev i:before {
