@@ -54,6 +54,13 @@ function schronpress_setup() {
 		'before_title'  => '<h4 class="sidebar-header">',
 		'after_title'   => '</h4>' 
 	) );
+
+	/*
+	 * Override gallery shortcode.
+	 * Ugly hack to make all gallery images link to image file, not attachment
+	 * - this is to make sure that lightbox galleries don't break.
+	 */
+	require_once( 'includes/gallery_shortcode.php' );
 }
 
 
