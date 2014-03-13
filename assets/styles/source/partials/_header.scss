@@ -1,0 +1,63 @@
+.header {
+  img {
+    display: inline-block;
+    max-height: 100px;
+    width: auto;
+    vertical-align: middle;
+  }
+  padding: $gutter/2 0;
+}
+
+
+.navbar-bg {
+  background-color: $navbar-color;
+  color: #fff;
+  border-bottom: 5px solid darken($navbar-color, 6%);
+}
+
+.navbar {
+  @include clearfix();
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+  }
+
+  a {
+    padding: .7em .75em;
+    font-size: 0.875em;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      background-color: lighten($navbar-color, 5%);
+    }
+  }
+
+  > ul > li {
+    display: block;
+    float: left;
+    &:hover {
+      background-color: lighten($navbar-color, 5%);
+    }
+  }
+
+  // Second level
+  > ul ul {
+    display: none;
+    a {
+      display: block;
+    }
+  }
+
+  > ul > li:hover > ul {
+    z-index: 999999;
+    @extend .navbar-bg;
+    display: block;
+    position: absolute;
+  }
+
+}
