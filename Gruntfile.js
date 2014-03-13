@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 tasks: ['jshint', 'uglify']
             },
             images: {
-                files: ['assets/images/**/*.{png,jpg,gif}'],
+                files: ['assets/images/**/*.{png,jpg,gif}', 'assets/js/vendor/**/img/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
             },
             livereload: {
@@ -59,7 +59,8 @@ module.exports = function(grunt) {
                 files: {
                     'assets/js/plugins.min.js': [
                         'assets/js/source/plugins.js',
-                        'assets/js/vendor/carouFredSel/*.js'
+                        'assets/js/vendor/carouFredSel/*.js',
+                        'assets/js/vendor/lightbox2/js/lightbox.js',
                     ]
                 }
             },
@@ -92,6 +93,20 @@ module.exports = function(grunt) {
                     src: ['**/*.{png,jpg,gif}'],
                     dest: 'assets/images/'
                 }]
+            },
+            lightbox2: {
+                options: {
+                    optimizationLevel: 7,
+                    progressive: true,
+                    interlaced: true,
+                    cache: false
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'assets/js/vendor/lightbox2/img/',
+                    src: ['*.{png,jpg,gif}'],
+                    dest: 'assets/images/lightbox2/'
+                }]
             }
         },
 
@@ -100,9 +115,10 @@ module.exports = function(grunt) {
             options: {
                 src: "./",
                 args: ["--verbose"],
-                exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'config.rb', '.jshintrc', '.bowerrc'],
+                exclude: ['.git*', 'node_modules', '.sass-cache', 'Gruntfile.js', 'package.json', '.DS_Store', 'README.md', 'config.rb', '.jshintrc', '.bowerrc', 'assets/js/vendor', 'assets/js/source', 'assets/images/source', 'assets/styles/source', 'assets/styles/vendor'],
                 recursive: true,
-                syncDestIgnoreExcl: true
+                syncDestIgnoreExcl: true,
+                clean: true
             },
             staging: {
                 options: {

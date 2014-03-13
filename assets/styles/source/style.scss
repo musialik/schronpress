@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! 
+/*!
  * Theme Name: Schronpress
  * Description: Scronpress is a wordpress theme for an animal shelter
  * Version: 0.0.1
@@ -26,3 +26,5 @@ img {
 @import 'partials/sidebar';
 @import 'partials/footer';
 
+// Vendor styles
+@import '../vendor/lightbox';

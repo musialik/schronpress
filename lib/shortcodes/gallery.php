@@ -49,7 +49,7 @@ function new_gallery_shortcode($attr) {
         'icontag'    => 'dt',
         'captiontag' => 'dd',
         'columns'    => 3,
-        'size'       => 'thumbnail',
+        'size'       => 'img-small',
         'include'    => '',
         'exclude'    => ''
     ), $attr));
@@ -128,20 +128,30 @@ function new_gallery_shortcode($attr) {
 
     $i = 0;
     foreach ( $attachments as $id => $attachment ) {
-        // Hack: make sure all items link to image file, regardless of user settings
-        $link = wp_get_attachment_link($id, $size);
+        // $link = wp_get_attachment_link($id, $size, false);
+
+        // Get the img-small thumbnail image
+        $image = wp_get_attachment_image( $id );
+
+        // Use large size for lightbox gallery, instead of full size
+        $url = wp_get_attachment_image_src( $id, 'large' );
 
         $output .= "<{$itemtag} class='gallery-item'>";
+
+        if ( $captiontag && trim($attachment->post_excerpt) ) {
+            // $output .= "
+            //     <{$captiontag} class='wp-caption-text gallery-caption'>
+            //     " . wptexturize($attachment->post_excerpt) . "
+            //     </{$captiontag}>";
+            $caption_text = wptexturize($attachment->post_excerpt);
+            $caption = "title='$caption_text'";
+        } else {
+            $caption = '';
+        }
         $output .= "
             <{$icontag} class='gallery-icon'>
-                $link
+                <a href='$url[0]' data-lightbox='gallery' title='$caption'>$image</a>
             </{$icontag}>";
-        if ( $captiontag && trim($attachment->post_excerpt) ) {
-            $output .= "
-                <{$captiontag} class='wp-caption-text gallery-caption'>
-                " . wptexturize($attachment->post_excerpt) . "
-                </{$captiontag}>";
-        }
         $output .= "</{$itemtag}>";
         if ( $columns > 0 && ++$i % $columns == 0 )
             $output .= '<br style="clear: both" />';

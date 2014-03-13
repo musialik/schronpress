@@ -36,7 +36,7 @@
 	}
 	.overlay {
 		@extend %img-small;
-		@extend %rounded;
+		// @extend %rounded;
 		display: none;
 		background-color: $overlay-color;
 	}
@@ -74,7 +74,7 @@
 }
 .content {
 	img {
-		@extend %rounded;
+		// @extend %rounded;
 		// @include margin-bottom;
 		// max-width: 100%;
 		// height: auto;
@@ -146,7 +146,7 @@
 
 .animal-header {}
 .animal-img {
-	@extend %rounded;
+	// @extend %rounded;
 	@extend %img-small;
 }
 .animal-content {

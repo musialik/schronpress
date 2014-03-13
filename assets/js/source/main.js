@@ -1,5 +1,6 @@
-/* Init the carousel */
 jQuery(document).ready(function($) {
+
+	/* Init the carousel */
 	$('#carousel').carouFredSel({
 		prev: '#carousel-prev',
 		next: '#carousel-next',
@@ -21,4 +22,15 @@ jQuery(document).ready(function($) {
 			pauseOnHover : true
 		}
 	});
+
+	/* Add lightbox to attachment images */
+	num = 1; // each image needs an unique data-lightbox attribute
+	$('.entry a > img').parent().each(function(e){
+		if(!$(this).attr('data-lightbox')) {
+		console.log($(this).attr('data-lightbox'))
+			$(this).attr('data-lightbox', num++);
+		}
+	});
+
 });
+

@@ -1,0 +1,28 @@
+// Import sass files from the js/vendor folder.
+// Bower packages are installed in js/vendor and js is included automatically by grunt,
+// we have to import the sass files manually if we want them to be compiled into style.css
+@import '../../js/vendor/lightbox2/sass/variables';
+@import '../../js/vendor/lightbox2/sass/lightbox';
+
+// Change image urls
+body:after {
+  content: url(assets/images/lightbox2/close.png) url(assets/images/lightbox2/loading.gif) url(assets/images/lightbox2/prev.png) url(assets/images/lightbox2/next.png)
+}
+.lb-cancel {
+  background: url(assets/images/lightbox2/loading.gif) no-repeat
+}
+.lb-prev {
+  &:hover {
+    background: url(assets/images/lightbox2/prev.png) left 48% no-repeat
+  }
+}
+.lb-next {
+  &:hover {
+    background: url(assets/images/lightbox2/next.png) right 48% no-repeat
+  }
+}
+.lb-data {
+  .lb-close {
+    background: url(assets/images/lightbox2/close.png) top right no-repeat
+  }
+}

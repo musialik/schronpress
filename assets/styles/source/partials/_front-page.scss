@@ -83,7 +83,7 @@
 }
 .news-item {}
 .news-item-img {
-	@extend %rounded;
+	// @extend %rounded;
 }
 .news-item-content {
 	@extend %box-item-content;
@@ -95,7 +95,7 @@
 }
 .adoptions-item {}
 .adoptions-item-img {
-	@extend %rounded;
+	// @extend %rounded;
 }
 .adoptions-item-content {
 	@extend %box-item-content;
