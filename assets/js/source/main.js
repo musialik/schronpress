@@ -44,5 +44,10 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	/* Disable links with only '#' as href */
+	$('a[href="#"]').click(function(e){
+		e.preventDefault();
+	});
+
 });
 
