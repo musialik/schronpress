@@ -146,13 +146,15 @@ function new_gallery_shortcode($attr) {
             $caption_text = wptexturize($attachment->post_excerpt);
             $caption = "title='$caption_text'";
         } else {
-            $caption = '';
+            $caption = null;
         }
+
         $output .= "
             <{$icontag} class='gallery-icon'>
-                <a href='$url[0]' data-lightbox='gallery' title='$caption'>$image</a>
+                <a href='$url[0]' data-lightbox='gallery' $caption>$image</a>
             </{$icontag}>";
         $output .= "</{$itemtag}>";
+
         if ( $columns > 0 && ++$i % $columns == 0 )
             $output .= '<br style="clear: both" />';
     }
