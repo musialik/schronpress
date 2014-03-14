@@ -162,10 +162,13 @@
 	@include clearfix;
 	@include margin-bottom(1);
 
+	font-size: 14px;
+
 	&.single, &.page {
 		margin-bottom: 0;
 	}
 }
+
 .entry-title {
 	margin-top: .5em;
 	@include margin-bottom(1);
@@ -177,13 +180,14 @@
 		// font-size: 2.2em;
 	}
 }
+
 .single-entry-title {
 	@extend .entry-title;
 	margin-top: 2.5em;
 	@include margin-bottom(2);
 }
 %entry-meta {
-	font-size: .75em;
+	font-size: .85em;
 	text-transform: uppercase;
 }
 .meta-category {

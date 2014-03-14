@@ -26,6 +26,10 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h4, h5, h6 {
+	font-weight: $semi-bold;
+}
+
 // Set header font sizes
 h1 {
 	font-size: 2.2em;
@@ -47,7 +51,7 @@ h6 {
 }
 
 // Set vertical rythm
-p, ul, ol {
+p, ul, ol, address, pre, table {
 	@include margin-bottom;
 }
 
@@ -65,6 +69,9 @@ ol {
 ul {
 	list-style-type: disc;
 }
+li {
+	padding: .1em 0;
+}
 
 a {
 	color: $link-color;
@@ -79,4 +86,89 @@ a {
 	font-weight: normal;
 	display: inline-block;
 	-webkit-font-smoothing: antialiased;
+}
+
+strong, b {
+	font-weight: $semi-bold;
+	color: #222;
+}
+
+cite {
+	color: $dark-grey;
+	font-size: .9em;
+}
+
+
+blockquote {
+	margin-left: 2.5em;
+
+	font-family: $mono-stack;
+
+	cite {
+		display: block;
+		text-align: right;
+	}
+
+	&:before {
+		@extend %dashicon;
+		content: "\f205";
+
+		float: left;
+		margin-left: -1.25em;
+
+		font-size: 2em;
+		color: $medium-grey;
+	}
+}
+
+em {
+	font-style: italic;
+}
+
+pre {
+	padding: .4em;
+
+	background-color: #f0f0f0;
+	font-family: $mono-stack;
+	overflow-x: scroll;
+}
+
+code {
+	font-family: $mono-stack;
+	word-wrap: break-word;
+}
+
+abbr {
+	text-decoration: underline;
+	cursor: help;
+}
+
+sub, sup {
+	font-size: .75em;
+}
+sub {
+	position: relative;
+	bottom: -.3em;
+}
+sup {
+	position: relative;
+	top: -.66em;
+}
+
+table {
+	width: 100%;
+}
+tr {
+
+}
+%table-cell {
+	padding: .2em .3em;
+}
+th {
+	@extend %table-cell;
+	font-weight: $semi-bold;
+	background-color: #f3f3f3;
+}
+td {
+	@extend %table-cell;
 }
