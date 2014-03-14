@@ -107,6 +107,7 @@ function new_gallery_shortcode($attr) {
         <style type='text/css'>
             #{$selector} {
                 margin: auto;
+                margin-bottom: 1em;
             }
             #{$selector} .gallery-item {
                 float: {$float};

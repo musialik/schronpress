@@ -2,7 +2,7 @@
 
 <section class="wrapper white">
 
-	<section class="content">
+	<section class="content no-header">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -16,9 +16,8 @@
 						<span class="meta-date"><?php echo get_the_date('j F Y'); ?></span>
 					</div>
 
-
 					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'img-small', array( 'class' => 'index-thumbnail alignleft' ) ); ?>
+						<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'index-thumbnail alignright' ) ); ?>
 					<?php endif; ?>
 
 					<!-- <img src="http://lorempixel.com/220/145/cats/5" alt="" class="index-thumbnail"> -->

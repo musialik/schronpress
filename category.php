@@ -6,21 +6,21 @@
 
 		<h1 class="archive-header"><?php single_cat_title(); ?></h1>
 
-		<section class="animals">
+		<section class="boxes">
 
 			<?php if ( have_posts() ) : ?>
 
 				  <?php while ( have_posts() ) : the_post(); ?>
 
-					<article class="animal">
+					<article class="box3">
 
 						<a href="<?php the_permalink(); ?>" class="box-link">
 							<div class="overlay"></div>
 							<div class="box-img-container">
-								<?php the_thumbnail_or_placeholder( 'img-small', 'animal-img' ); ?>
+								<?php the_thumbnail_or_placeholder( 'img-small', 'box3-img' ); ?>
 							</div>
 							<h2 class="box-item-header"><?php the_title(); ?></h2>
-							<div class="animal-content"><?php the_short_excerpt(); ?></div>
+							<div class="box3-content"><?php the_short_excerpt(); ?></div>
                         	<span class="box-date"><?php echo get_the_date('j F Y'); ?></span>
 						</a>
 

@@ -16,6 +16,23 @@ function previous_posts_link_attributes() {
 
 
 /*
+ * Add classes to previous/next post
+ */
+
+add_filter('next_post_link', 'next_post_link_attributes');
+function next_post_link_attributes($output) {
+    $code = 'class="btn-previous"';
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}
+
+add_filter('previous_post_link', 'previous_post_link_attributes');
+function previous_post_link_attributes($output) {
+    $code = 'class="btn-next"';
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}
+
+
+/*
  * Custom template tags
  */
 function the_short_excerpt( $number_of_words = 10 ) {

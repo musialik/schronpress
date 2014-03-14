@@ -61,13 +61,15 @@
 .box-item-header {
 	margin: .5em 0 .4em 0;
 	font-size: 1.25em;
-	font-weight: 200;
+	font-weight: $thin;
+	color: #000;
 }
 
 %box-item-content {
 	font-size: .8125em;
 	line-height: 1.4em;
 	overflow: hidden;
+	color: $dark-grey;
 }
 
 .box-date {
@@ -75,6 +77,37 @@
 	font-size: .7em;
 	color: $medium-grey;
 	text-transform: uppercase;
+}
+
+
+// Boxes 3 columns wide
+
+.boxes {
+	// Holds multiple rows of boxes
+	@include clearfix;
+}
+
+.box3 {
+	@include width(3);
+	float: left;
+	margin-bottom: 3em;
+	&:nth-child(3n+1) {
+		clear: left;
+	}
+	&:not(:nth-child(3n)) {
+		margin-right: $gutter;
+	}
+}
+
+.box3-header {}
+
+.box3-img {
+	// @extend %rounded;
+	@extend %img-small;
+}
+
+.box3-content {
+	@extend %box-item-content;
 }
 
 // Content
@@ -85,6 +118,9 @@
 		// @include margin-bottom;
 		// max-width: 100%;
 		// height: auto;
+	}
+	&.no-header {
+		padding-top: 2em;
 	}
 }
 
@@ -157,27 +193,6 @@
 	@extend %entry-meta;
 	color: $medium-grey;
 }
-// .meta {
-// 	margin-top: 1em;
-// 	margin-bottom: 2em;
-// 	padding: .15em .35em;
-// 	clear: both;
-// 	// color: $medium-grey;
-// 	background-color: $sidebar-color;
-// 	font-size: .75em;
-// }
-
-
-// Category
-
-.animal-header {}
-.animal-img {
-	// @extend %rounded;
-	@extend %img-small;
-}
-.animal-content {
-	@extend %box-item-content;
-}
 
 
 // Wp image alignments and captions
@@ -238,4 +253,8 @@ img%wp-image-extra-margin {
 	color: $medium-grey;
 	font-style: italic;
 	text-align: center;
+}
+
+.gallery {
+	margin-bottom: 1em;
 }

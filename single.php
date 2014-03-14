@@ -24,6 +24,8 @@
 
                 </article>
 
+                <?php get_template_part( 'lib/partials/_pagination', 'single' ); ?>
+
             <?php endwhile; ?>
 
         <?php else : ?>
