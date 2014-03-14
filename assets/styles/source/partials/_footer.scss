@@ -7,7 +7,7 @@
 	padding-bottom: 7em;
 }
 .footer-widget {
-	
+
 }
 .footer-header {
 	color: $white;
@@ -30,6 +30,8 @@
 	border: 0;
 	outline: 0;
 	padding: .75em;
+
+	background-color: fade-out($white, .1);
 }
 .btn-footer {
 	@include box-sizing(border-box);
@@ -42,4 +44,8 @@
 	&:hover {
 		background-color: saturate(darken($footer-color, 15%), 10%);
 	}
+}
+
+.fb-like-box {
+	background-color: fade-out($white, .075);
 }

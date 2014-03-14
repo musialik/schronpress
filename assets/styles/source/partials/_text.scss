@@ -52,7 +52,7 @@ h6 {
 
 // Set vertical rythm
 p, ul, ol, address, pre, table {
-	@include margin-bottom;
+	@include margin-bottom(1.45);
 }
 
 // Remove bottom margin for nested lists

@@ -17,6 +17,8 @@
 				<aside class="footer-widget footer-right">
 					<h4 class="footer-header">Facebook</h4>
 					<p class="footer-content">Już prawie 5000 osób wspiera nas na facebooku! Dziękujemy.</p>
+					<div id="fb-root"></div>
+					<div class="fb-like-box" data-href="https://www.facebook.com/otozoswiecim" data-colorscheme="light" data-show-faces="false" data-header="false" data-stream="false" data-show-border="false"></div>
 				</aside>
 
 			</footer>
