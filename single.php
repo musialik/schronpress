@@ -8,7 +8,7 @@
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <article class="entry">
+                <article class="entry single">
 
                     <div class="single-entry-title">
                         <span class="meta-category"><?php echo the_category(', '); ?></span>
@@ -22,13 +22,9 @@
 
                     <?php the_content(); ?>
 
-                    <div class="meta">Dodano: <?php echo get_the_date('j F Y'); ?>, kategoria: <?php the_category( ', ' ); ?></div>
-
                 </article>
 
             <?php endwhile; ?>
-
-            <?php get_template_part( 'lib/partials/_pagination' ); ?>
 
         <?php else : ?>
 

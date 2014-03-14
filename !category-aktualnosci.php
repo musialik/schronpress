@@ -4,7 +4,7 @@
 
 	<section class="content">
 
-		<h1 class="page-header"><?php single_cat_title(); ?></h1>
+		<h1 class="archive-header"><?php single_cat_title(); ?></h1>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -13,15 +13,15 @@
 				<article class="entry">
 
 					<div class="entry-title">
-						<h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
 						<span class="meta-date"><?php echo get_the_date('j F Y'); ?></span>
 					</div>
 
 					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'img-small', array( 'class' => 'index-thumbnail alignleft' ) ); ?>
+						<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'index-thumbnail alignleft' ) ); ?>
 					<?php endif; ?>
 
-					<?php the_excerpt(); ?>
+					<?php the_content('Czytaj dalej'); ?>
 
 				</article>
 

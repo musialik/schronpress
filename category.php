@@ -4,7 +4,7 @@
 
 	<section class="content">
 
-		<h1 class="page-header"><?php single_cat_title(); ?></h1>
+		<h1 class="archive-header"><?php single_cat_title(); ?></h1>
 
 		<section class="animals">
 
@@ -21,6 +21,7 @@
 							</div>
 							<h2 class="box-item-header"><?php the_title(); ?></h2>
 							<div class="animal-content"><?php the_short_excerpt(); ?></div>
+                        	<span class="box-date"><?php echo get_the_date('j F Y'); ?></span>
 						</a>
 
 					</article>

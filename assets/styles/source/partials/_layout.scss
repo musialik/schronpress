@@ -56,49 +56,12 @@
 }
 
 // Carousel
-.carousel {
-}
-	.carousel-border {
-		@include clearfix;
-		@include width(9);
-		@include box-sizing(border-box);
-		position: relative;
-		float: left;
-	}
-	.carousel-container {
-		@include clearfix;
-		margin-top: $gutter*2;
-	}
-	.carousel-item {
-		@include width(9);
-		display: block;
-		position: relative;
-		float: left;
-	}
-	.carousel-item-img {
-		display: block;
-	}
-	.carousel-item-content-box {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-	}
+
+
+
 
 	// Carousel Navigation
-	%carousel-nav {
-		position: absolute;
-		margin-top: 12em;
-		z-index: 99999;
-		text-align: center;
-	}
-	.carousel-prev {
-		@extend %carousel-nav;
-		left: $gutter;
-	}
-	.carousel-next {
-		@extend %carousel-nav;
-		right: $gutter;
-	} 
+
 
 // Box elements
 .news, .adoptions {
