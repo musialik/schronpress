@@ -35,6 +35,7 @@
 }
 .btn-footer {
 	@include box-sizing(border-box);
+	padding: .75em;
 	width: 20%;
 	float: right;
 	@extend %btn;

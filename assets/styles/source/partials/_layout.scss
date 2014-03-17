@@ -19,11 +19,8 @@
 // Content
 
 .content {
-	@include width(9);
+	@include width(8.5);
 	float: left;
-}
-.entry {
-	margin-right: .5*$gutter;
 }
 
 

@@ -16,7 +16,7 @@
 
 %btn {
 	display: inline-block;
-	padding: .75em;
+	padding: .5em .65em;
 	border: 0;
 	outline: 0;
 	&:hover {
@@ -85,6 +85,11 @@
 .boxes {
 	// Holds multiple rows of boxes
 	@include clearfix;
+}
+
+.boxes3 {
+	@include width(9);
+	float: left;
 }
 
 .box3 {
@@ -162,7 +167,7 @@
 	@include clearfix;
 	@include margin-bottom(1);
 
-	font-size: 14px;
+	// font-size: 14px;
 
 	&.single, &.page {
 		margin-bottom: 0;

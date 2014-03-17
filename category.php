@@ -6,41 +6,41 @@
 
 		<h1 class="archive-header"><?php single_cat_title(); ?></h1>
 
-		<section class="boxes">
+	</section>
 
-			<?php if ( have_posts() ) : ?>
+  	<?php get_sidebar(); ?>
 
-				  <?php while ( have_posts() ) : the_post(); ?>
+	<section class="boxes boxes3">
 
-					<article class="box3">
+		<?php if ( have_posts() ) : ?>
 
-						<a href="<?php the_permalink(); ?>" class="box-link">
-							<div class="overlay"></div>
-							<div class="box-img-container">
-								<?php the_thumbnail_or_placeholder( 'img-small', 'box3-img' ); ?>
-							</div>
-							<h2 class="box-item-header"><?php the_title(); ?></h2>
-							<div class="box3-content"><?php the_short_excerpt(); ?></div>
-                        	<span class="box-date"><?php echo get_the_date('j F Y'); ?></span>
-						</a>
+			  <?php while ( have_posts() ) : the_post(); ?>
 
-					</article>
+				<article class="box3">
 
-				  <?php endwhile; ?>
+					<a href="<?php the_permalink(); ?>" class="box-link">
+						<div class="overlay"></div>
+						<div class="box-img-container">
+							<?php the_thumbnail_or_placeholder( 'img-small', 'box3-img' ); ?>
+						</div>
+						<h2 class="box-item-header"><?php the_title(); ?></h2>
+						<div class="box3-content"><?php the_short_excerpt(); ?></div>
+						<span class="box-date"><?php echo get_the_date('j F Y'); ?></span>
+					</a>
 
-				  <?php get_template_part( 'lib/partials/_pagination' ); ?>
+				</article>
 
-				<?php else : ?>
+			  <?php endwhile; ?>
 
-				  	Nic nie znaleziono
+			  <?php get_template_part( 'lib/partials/_pagination' ); ?>
 
-				<?php endif; ?>
+			<?php else : ?>
 
-		</section>
+				Nic nie znaleziono
 
-  </section>
+			<?php endif; ?>
 
-  <?php get_sidebar(); ?>
+	</section>
 
 </section>
 
