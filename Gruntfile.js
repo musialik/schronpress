@@ -122,16 +122,16 @@ module.exports = function(grunt) {
             },
             staging: {
                 options: {
-                    dest: "/var/www/otoz-dev/wp-content/themes/schronpress/",
-                    host: "root@dev.otozanimalsoswiecim.pl"
+                    dest: "/home/www/otoz-dev/wp-content/themes/schronpress/",
+                    host: "mus@dev.otozanimalsoswiecim.pl"
                 }
             },
-            // production: {
-            //     options: {
-            //         dest: "~/path/to/theme",
-            //         host: "user@host.com"
-            //     }
-            // }
+            production: {
+                options: {
+                    dest: "/home/www/otoz/wp-content/themes/schronpress/",
+                    host: "mus@otozanimalsoswiecim.pl"
+                }
+            }
         }
 
     });
