@@ -6,7 +6,7 @@
 		// Get sticky posts
 		$sticky = get_option( 'sticky_posts' );
 		// Get top 5 sticky posts
-		$sticky = array_slice( $sticky, 0, 5 );
+		$sticky = array_slice( $sticky, 0, 10 );
 		// Query sticky posts
 		$carousel = new WP_Query( array(
 			'post__in' => $sticky,
