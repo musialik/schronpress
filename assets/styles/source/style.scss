@@ -7,24 +7,25 @@
  * Author URI: http://michalmusialik.com/
  */
 
-@import 'compass/reset';
+@import "compass/reset";
 img {
 	display: inline-block;
 }
-@import 'compass/utilities/general/clearfix';
-@import 'compass/css3';
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
 
-@import 'partials/variables';
-@import 'partials/grid';
-@import 'partials/layout';
-@import 'partials/text';
+@import "partials/variables";
+@import "partials/grid";
+@import "partials/layout";
+@import "partials/text";
 
-@import 'partials/header';
-@import 'partials/pager';
-@import 'partials/content';
-@import 'partials/front-page';
-@import 'partials/sidebar';
-@import 'partials/footer';
+@import "partials/header";
+@import "partials/pager";
+@import "partials/content";
+@import "partials/front-page";
+@import "partials/sidebar";
+@import "partials/footer";
+@import "partials/payu";
 
 // Vendor styles
-@import '../vendor/lightbox';
+@import "../vendor/lightbox";

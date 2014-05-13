@@ -15,9 +15,18 @@
 			<a href="<?php bloginfo( 'url' ); ?>" class="header-left-widget">
 				<img src="<?php echo $template_url; ?>/assets/images/otoz-animals-oswiecim-logo.png" alt="OTOZ Animals Oświęcim logo">
 			</a>
-			<a href="<?php bloginfo( 'url' ); ?>/1-procent/" class="right header-right-widget">
+		<!-- 	<a href="<?php bloginfo( 'url' ); ?>/1-procent/" class="right header-right-widget">
 				<img src="<?php echo $template_url; ?>/assets/images/1procent-header-widget.jpg" alt="1 procent na schronisko">
-			</a>
+			</a> -->
+			<?php if (!isset($_POST['kwota'])) : ?>
+				<aside class="right header-right-widget payu-widget">
+					<form action="/payu" method="post">
+		              	<input type="currency" name="kwota" class="kwota" placeholder="wpisz kwotę">
+		              	<br>
+		              	<button type="submit" value="" class="">Przekaż darowiznę</button>
+		            </form>
+				</aside>
+			<?php endif; ?>
 		</header>
 
 		<?php get_template_part( 'lib/partials/_navbar' ); ?>

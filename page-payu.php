@@ -28,7 +28,7 @@ Template Name: Payu
 
           <?php require('lib/payu.php');  ?>
 
-          <?php if (isset($_POST['kwota'])) : ?>
+          <?php if (isset($_POST['kwota']) && $_POST['kwota'] > 0 ) : ?>
             <?php
             $amount = str_replace(',', '.', $_POST['kwota']);
             $amount = floatval($amount) * 100;
@@ -49,21 +49,22 @@ Template Name: Payu
               <?php endforeach; ?>
               <input type="hidden" name="OpenPayu-Signature" value="<?php echo generate_signature($form, '126e6435f9276cb659ab90a192ec4cc1', '168043'); ?>">
               <p>
-                Darowizna: <?php echo number_format($amount/100, 2, ",", " ") . 'zł'; ?>
+                Kwota do przekazania: <?php echo number_format($amount/100, 2, ",", " ") . 'zł'; ?>  
+                <small><a href="/payu">[zmień]</a></small>
               </p>
               <p>
                 <button type="submit" class="btn-payu"></button>
               </p>
             </form>
+          <?php elseif ( isset($_POST['kwota']) ) : ?>
+            <p>Podano niepoprawną kwotę. <small><a href="/payu">[zmień]</a></small></p>
           <?php else : ?>
-            <form action="" method="post">
-              <label for="kwota">Kwota w złotówkach: </label>
-              <br>
-              <input type="text" name="kwota">
-              <input type="submit" value="Przekaż">
-            </form>
+            <p>Wpisz kwotę darowizny w formularzu.</p>
           <?php endif; ?>
 
+          <p><strong>Uwaga!</strong> Czekamy na akceptację ze strony PayU, do tego momentu można wykonywać jedynie płatności testowe.</p>
+
+        <img src="<?php bloginfo('template_url'); ?>/assets/images/payu-banki-660.png" alt="" class="payu-banki">
 
         </article>
 

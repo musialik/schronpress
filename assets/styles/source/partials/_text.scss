@@ -172,3 +172,7 @@ th {
 td {
 	@extend %table-cell;
 }
+
+small {
+	font-size: .9em;
+}
