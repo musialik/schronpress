@@ -50,16 +50,15 @@ Template Name: Payu
               <input type="hidden" name="OpenPayu-Signature" value="<?php echo generate_signature($form, '126e6435f9276cb659ab90a192ec4cc1', '168043'); ?>">
               <p>
                 Kwota do przekazania: <?php echo number_format($amount/100, 2, ",", " ") . 'zł'; ?>  
-                <small><a href="/payu">[zmień]</a></small>
               </p>
               <p>
                 <button type="submit" class="btn-payu"></button>
               </p>
             </form>
           <?php elseif ( isset($_POST['kwota']) ) : ?>
-            <p>Podano niepoprawną kwotę. <small><a href="/payu">[zmień]</a></small></p>
+            <p>Podano niepoprawną kwotę. Wpisz poprawną kwotę w formularzu w prawym górnym rogu.<small></p>
           <?php else : ?>
-            <p>Wpisz kwotę darowizny w formularzu.</p>
+            <p>Wpisz kwotę darowizny w formularzu w prawym górnym rogu.</p>
           <?php endif; ?>
 
           <p><strong>Uwaga!</strong> Czekamy na akceptację ze strony PayU, do tego momentu można wykonywać jedynie płatności testowe.</p>

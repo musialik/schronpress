@@ -8,9 +8,10 @@
 
 .payu-widget {
   background-image: url('assets/images/PayU.png');
-  background-position: left center;
-  padding-left: 160px;
+  background-position: 5px center;
+  background-size: 35%;
   background-repeat: no-repeat;
+  padding-left: 90px;
   position: relative;
   background-color: lighten($sidebar-color, 3%);
 

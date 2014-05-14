@@ -18,15 +18,13 @@
 		<!-- 	<a href="<?php bloginfo( 'url' ); ?>/1-procent/" class="right header-right-widget">
 				<img src="<?php echo $template_url; ?>/assets/images/1procent-header-widget.jpg" alt="1 procent na schronisko">
 			</a> -->
-			<?php if (!isset($_POST['kwota'])) : ?>
-				<aside class="right header-right-widget payu-widget">
-					<form action="/payu" method="post">
-		              	<input type="currency" name="kwota" class="kwota" placeholder="wpisz kwotę">
-		              	<br>
-		              	<button type="submit" value="" class="">Przekaż darowiznę</button>
-		            </form>
-				</aside>
-			<?php endif; ?>
+			<aside class="right header-right-widget payu-widget">
+				<form action="/payu" method="post">
+	              	<input type="currency" name="kwota" class="kwota" placeholder="wpisz kwotę">
+	              	<br>
+	              	<button type="submit" value="" class="">Przekaż darowiznę</button>
+	            </form>
+			</aside>
 		</header>
 
 		<?php get_template_part( 'lib/partials/_navbar' ); ?>
