@@ -61,8 +61,6 @@ Template Name: Payu
             <p>Wpisz kwotę darowizny w formularzu w prawym górnym rogu.</p>
           <?php endif; ?>
 
-          <p><strong>Uwaga!</strong> Czekamy na akceptację ze strony PayU, do tego momentu można wykonywać jedynie płatności testowe.</p>
-
         <img src="<?php bloginfo('template_url'); ?>/assets/images/payu-banki-660.png" alt="" class="payu-banki">
 
         </article>
