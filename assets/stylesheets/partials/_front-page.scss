@@ -1,0 +1,170 @@
+// Front page
+
+
+// Carousel
+
+.carousel {
+	a {
+		color: inherit;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.carousel-container {
+	@include clearfix;
+	margin-top: $gutter*2;
+}
+
+.carousel-border {
+	@include width(9);
+	@include box-sizing(border-box);
+	@include clearfix;
+	@include border;
+	position: relative;
+	margin: auto;
+}
+
+
+// Carousel item
+
+.carousel-item {
+	@include width(9);
+	display: block;
+	position: relative;
+	float: left;
+}
+
+.carousel-item-img {
+	display: block;
+}
+
+.carousel-item-content-box {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding: .25em .5em .5em .5em;
+
+	background-color: fade-out($white, .3);
+	@include background(linear-gradient(top, fade-out($white, .4), fade-out($white, .1)))
+}
+
+.carousel-item-content {
+	@extend %box-item-content;
+}
+
+.carousel-item-header {
+	margin: 0 0 .1em 0;
+
+	font-size: 1.35em;
+	font-weight: 200;
+}
+
+
+// Carousel Navigation
+
+%carousel-nav {
+	position: absolute;
+	margin-top: 10em;
+	z-index: 99999;
+	text-align: center;
+
+	color: lighten($light-grey, 4%);
+	@include single-text-shadow(0, 0, 2px, false, #000);
+
+	i {
+		@extend %dashicon;
+		// padding: .35em .2em;
+		font-size: 3em;
+		text-align: center;
+		&:before {
+			line-height: 1em;
+		}
+	}
+
+	&:hover {
+		color: $light-grey;
+	}
+}
+
+.carousel-prev {
+	@extend %carousel-nav;
+	left: $gutter/2;
+
+	i:before {
+		content: "\f341";
+	}
+}
+
+.carousel-next {
+	@extend %carousel-nav;
+	right: $gutter/2;
+
+	i:before {
+		content: "\f345";
+	}
+}
+
+
+// Section's header
+
+.fp-header {
+	@include clearfix;
+	margin-top: 2.5em;
+	@include margin-bottom;
+	clear: both;
+
+	@include border-bottom;
+
+	font-size: 1.125em;
+	font-weight: 400;
+
+	> a {
+		float: right;
+
+		font-size: .7em;
+		color: $link-color;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// Front page vertical rythm
+
+%fp-rythm {
+	margin-bottom: 2em;
+}
+
+.news {
+	// @extend %fp-rythm;
+	.overlay {
+		@extend %img-medium;
+	}
+}
+.news-item {}
+.news-item-img {
+	// @extend %rounded;
+}
+.news-item-content {
+	@extend %box-item-content;
+}
+
+
+.adoptions {
+	@extend %fp-rythm;
+}
+.adoptions-item {}
+.adoptions-item-img {
+	// @extend %rounded;
+}
+.adoptions-item-content {
+	@extend %box-item-content;
+}
+.adoptions-item-more-link {
+	display: inline-block;
+	margin-top: .35em;
+}

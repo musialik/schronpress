@@ -1,0 +1,37 @@
+.sidebar {
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	ul, ol {
+		margin: 0;
+		list-style: none;
+	}
+}
+
+.sidebar-widget {
+	font-size: .875em;
+	padding: 2em;
+	margin: 2.2871428*$gutter 0;
+	background-color: $sidebar-color;
+	&.alt-bg {
+		background-color: $sidebar-alt-color;
+	}
+	li {
+		margin: 0;
+		line-height: 1.3em;
+		padding: .15em 0;
+	}
+}
+
+.sidebar-header {
+	margin: 0 0 .3em 0;
+	font-size: 1em;
+	font-weight: $normal;
+}
+
+.sidebar-content {
+
+}
