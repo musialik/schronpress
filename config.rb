@@ -1,27 +1,49 @@
 # Require any additional compass plugins here.
+require 'rubygems'
+require 'bundler'
 
-# Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = "/"
-sass_dir = "assets/styles/source"
-images_dir = "assets/images"
-javascripts_dir = "assets/js"
-fonts_dir = "assets/fonts"
+Bundler.require
+# Other gems...
 
-# You can select your preferred output style here (can be overridden via the command line):
-# output_style = :expanded or :nested or :compact or :compressed
-output_style = :compressed
+# Settings
+class Theme
+  attr_reader :sprockets, :production, :staging
 
-relative_assets = true
+  def initialize
+    root = File.dirname(__FILE__)
+    compass_gem_root = Gem.loaded_specs['compass'].full_gem_path
 
-# To disable debugging comments that display the original location of your selectors.
-line_comments = false
 
-color_output = false
+    ##
+    # Assets
 
-# If you prefer the indented syntax, you might want to regenerate this
-# project again passing --syntax sass, or you can uncomment this:
-# preferred_syntax = :sass
-# and then run:
-# sass-convert -R --from scss --to sass assets/scss scss && rm -rf sass && mv scss sass
-preferred_syntax = :scss
+    @sprockets = Sprockets::Environment.new(root) do |env| 
+      # Uncomment this line to display logger messages
+      # env.logger = Logger.new(STDOUT)
+    end
+
+    @sprockets.append_path File.join('assets', 'javascripts')
+    @sprockets.append_path File.join('assets', 'stylesheets')
+    # This allows to import compass files
+    @sprockets.append_path File.join(compass_gem_root, 'frameworks', 'compass', 'stylesheets')
+    @sprockets.append_path File.join(compass_gem_root, 'frameworks', 'blueprint', 'stylesheets')
+    # More paths...
+
+    @sprockets.js_compressor  = :uglify
+    @sprockets.css_compressor = :scss
+
+
+    ##
+    # Rsync
+
+    @production = {
+      remote_host: 'mus@otozanimalsoswiecim.pl',
+      remote_path: '/home/www/otoz/wp-content/themes/schronpress/',
+    }
+    @staging = {
+      remote_host: 'mus@dev.otozanimalsoswiecim.pl',
+      remote_path: '/home/www/otoz-dev/wp-content/themes/schronpress/', 
+    }
+    
+  end
+end
