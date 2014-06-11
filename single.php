@@ -23,9 +23,9 @@
 
                     <?php the_content(); ?>
 
-                    <div class="fb-like fb-like-bottom" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
-
                 </article>
+
+                <div class="fb-like fb-like-bottom" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
 
                 <?php get_template_part( 'lib/partials/_pagination', 'single' ); ?>
 
