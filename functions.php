@@ -108,7 +108,7 @@ function schronpress_scripts() {
     // wp_enqueue_script( 'schronpress-mainjs', get_template_directory_uri() . '/assets/js/main.min.js',
     // 					array( 'schronpress-pluginsjs' ), '1.0.0', true );
     wp_enqueue_script( 'schronpress-js', get_template_directory_uri() . '/javascript.js', 
-    									  array('jquery'), '1.1.0', true );
+    									  array('jquery'), '1.1.1', true );
 }
 
 
