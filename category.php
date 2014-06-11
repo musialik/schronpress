@@ -12,6 +12,8 @@
 
 	<section class="boxes boxes3">
 
+		<?php query_posts($query_string . '&orderby=modified'); ?>
+
 		<?php if ( have_posts() ) : ?>
 
 			  <?php while ( have_posts() ) : the_post(); ?>
@@ -25,7 +27,7 @@
 						</div>
 						<h2 class="box-item-header"><?php the_title(); ?></h2>
 						<div class="box3-content"><?php the_short_excerpt(); ?></div>
-						<span class="box-date"><?php echo get_the_date('j F Y'); ?></span>
+						<span class="box-date"><?php the_modified_date('j F Y'); ?></span>
 					</a>
 
 				</article>

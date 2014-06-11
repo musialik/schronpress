@@ -145,11 +145,13 @@ function my_img_caption_shortcode_filter( $val, $attr, $content = null )
 /*
  * Add support for lazy loading
  */
-function alter_attr_wpse_102158($attr) {
-  // remove_filter('wp_get_attachment_image_attributes','alter_attr_wpse_102158');
-  $attr['class'] .= ' lazy';
-  $attr['data-original'] = $attr['src'];
-  $attr['src'] = null;
+function schronpress_add_lazy_images($attr) {
+  // remove_filter('wp_get_attachment_image_attributes','schronpress_add_lazy_images');
+  if(!in_array('carousel-item-img', $attr)) {
+    $attr['class'] .= ' lazy';
+    $attr['data-original'] = $attr['src'];
+    $attr['src'] = null;
+  }
   return $attr;
 }
-add_filter('wp_get_attachment_image_attributes','alter_attr_wpse_102158'); 
+add_filter('wp_get_attachment_image_attributes','schronpress_add_lazy_images'); 
