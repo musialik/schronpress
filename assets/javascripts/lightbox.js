@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
 
     // Add data-lightbox attribute to all linked images that don't have it already
     if(!$(this).attr('data-lightbox')) {
-      console.log($(this).attr('data-lightbox'));
+      // console.log($(this).attr('data-lightbox'));
       $(this).attr('data-lightbox', num++);
     }
 

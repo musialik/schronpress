@@ -56,7 +56,7 @@ Template Name: Payu
               </p>
             </form>
           <?php elseif ( isset($_POST['kwota']) ) : ?>
-            <p>Podano niepoprawną kwotę. Wpisz poprawną kwotę w formularzu w prawym górnym rogu.<small></p>
+            <p>Podano niepoprawną kwotę. Wpisz poprawną kwotę w formularzu w prawym górnym rogu.</p>
           <?php else : ?>
             <p>Wpisz kwotę darowizny w formularzu w prawym górnym rogu.</p>
           <?php endif; ?>

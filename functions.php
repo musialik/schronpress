@@ -140,4 +140,16 @@ function my_img_caption_shortcode_filter( $val, $attr, $content = null )
 	. (int) $width . 'px">' . do_shortcode( $content ) . '<figcaption ' . $capid
 	. 'class="wp-caption-text">' . $caption . '</figcaption></figure>';
 }
-?>
+
+
+/*
+ * Add support for lazy loading
+ */
+function alter_attr_wpse_102158($attr) {
+  // remove_filter('wp_get_attachment_image_attributes','alter_attr_wpse_102158');
+  $attr['class'] .= ' lazy';
+  $attr['data-original'] = $attr['src'];
+  $attr['src'] = null;
+  return $attr;
+}
+add_filter('wp_get_attachment_image_attributes','alter_attr_wpse_102158'); 
