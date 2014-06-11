@@ -11,6 +11,8 @@
 	</head>
 	<body>
 
+		<div id="fb-root"></div>
+
 		<header class="wrapper header">
 			<a href="<?php bloginfo( 'url' ); ?>" class="header-left-widget">
 				<img src="<?php echo $template_url; ?>/assets/images/otoz-animals-oswiecim-logo.png" alt="OTOZ Animals Oświęcim logo">

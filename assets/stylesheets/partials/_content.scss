@@ -202,6 +202,12 @@
 	@extend %entry-meta;
 	color: $medium-grey;
 }
+.fb-like-top {
+	float: right;
+}
+.fb-like-bottom {
+	margin-bottom: 40px;
+}
 
 
 // Wp image alignments and captions

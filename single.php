@@ -14,6 +14,7 @@
                         <span class="meta-category"><?php echo the_category(', '); ?></span>
                         <h1><?php the_title() ?></h1>
                         <span class="meta-date"><?php echo get_the_date('j F Y'); ?></span>
+                        <div class="fb-like fb-like-top" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="recommend" data-show-faces="true" data-share="true"></div>
                     </div>
 
                     <?php if ( has_post_thumbnail() ) : ?>
@@ -21,6 +22,8 @@
                     <?php endif; ?>
 
                     <?php the_content(); ?>
+
+                    <div class="fb-like fb-like-bottom" data-href="<?php the_permalink(); ?>" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="true"></div>
 
                 </article>
 
