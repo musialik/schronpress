@@ -11,7 +11,7 @@
 	</head>
 	<body>
 
-		<div id="fb-root"></div>
+		<?php get_template_part( 'partials/_facebook' ); ?>
 
 		<header class="wrapper header">
 			<a href="<?php bloginfo( 'url' ); ?>" class="header-left-widget">
@@ -29,6 +29,6 @@
 			</aside>
 		</header>
 
-		<?php get_template_part( 'lib/partials/_navbar' ); ?>
+		<?php get_template_part( 'partials/_navbar' ); ?>
 
 		<div class="content-bg">

@@ -34,7 +34,7 @@
 
 			  <?php endwhile; ?>
 
-			  <?php get_template_part( 'lib/partials/_pagination' ); ?>
+			  <?php get_template_part( 'partials/_pagination' ); ?>
 
 			<?php else : ?>
 

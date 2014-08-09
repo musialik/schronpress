@@ -77,7 +77,7 @@ function schronpress_setup() {
 	 * Ugly hack to make all gallery images link to image file, not attachment
 	 * - this is to make sure that lightbox galleries don't break.
 	 */
-	require_once( 'lib/shortcodes/gallery.php' );
+	require_once( 'shortcodes/gallery.php' );
 }
 
 
