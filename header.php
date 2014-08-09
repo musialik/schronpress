@@ -11,8 +11,6 @@
 	</head>
 	<body>
 
-		<?php get_template_part( 'partials/_facebook' ); ?>
-
 		<header class="wrapper header">
 			<a href="<?php bloginfo( 'url' ); ?>" class="header-left-widget">
 				<img src="<?php echo $template_url; ?>/assets/images/otoz-animals-oswiecim-logo.png" alt="OTOZ Animals Oświęcim logo">
