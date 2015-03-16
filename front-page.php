@@ -139,7 +139,7 @@
        * Display latest post from nowo-przybyle category
        */
       $category = new WP_Query( array(
-        'category_name' => 'nowo-przybyle',
+        'category_name' => 'nowo przybyle',
         'ignore_sticky_posts' => 1,
         'posts_per_page' => 4
       ) );
@@ -157,7 +157,7 @@
             <h3 class="box-item-header"><?php the_title(); ?></h3>
             <div class="adoptions-item-content">
               <?php the_short_excerpt(); ?>
-              <?php $category_url = get_category_link( get_cat_ID( 'nowo-przybyle' ) ); ?>
+              <?php $category_url = get_category_link( get_cat_ID( 'Nowo przybyłe' ) ); ?>
               <a href="<?php echo $category_url; ?>" class="adoptions-item-more-link">Wszystkie nowo przybyłe...</a>
             </div>
           </a>
