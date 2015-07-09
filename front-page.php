@@ -136,6 +136,43 @@
 
     <?php
       /*
+       * Display latest post from zaginione category
+       */
+      $category = new WP_Query( array(
+        'category_name' => 'zaginione zwierzeta ogloszenia',
+        'ignore_sticky_posts' => 1,
+        'posts_per_page' => 4
+      ) );
+
+    ?>
+
+    <?php if ( $category->have_posts() ) : while ( $category->have_posts() ) : $category->the_post() ?>
+
+        <article class="adoptions-item">
+          <a href="<?php the_permalink(); ?>" class="box-link">
+            <div class="overlay"></div>
+            <div class="box-img-container">
+              <?php the_thumbnail_or_placeholder( 'img-small', 'adoptions-item-img' ); ?>
+            </div>
+            <h3 class="box-item-header"><?php the_title(); ?></h3>
+            <div class="adoptions-item-content">
+              <?php the_short_excerpt(); ?>
+              <?php $category_url = get_category_link( get_cat_ID( 'Zaginione' ) ); ?>
+              <a href="<?php echo $category_url; ?>" class="adoptions-item-more-link">Wszystkie zaginione...</a>
+            </div>
+          </a>
+        </article>
+
+    <?php endwhile; endif; ?>
+
+  </section>
+
+  <section class="adoptions">
+
+    <h2 class="fp-header">Zaginione</h2>
+
+    <?php
+      /*
        * Display latest post from nowo-przybyle category
        */
       $category = new WP_Query( array(
