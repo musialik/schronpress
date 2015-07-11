@@ -194,7 +194,7 @@
             <h3 class="box-item-header"><?php the_title(); ?></h3>
             <div class="adoptions-item-content">
               <?php the_short_excerpt(); ?>
-              <?php $category_url = get_category_link( get_cat_ID( 'Zaginione' ) ); ?>
+              <?php $category_url = get_category_link( get_cat_ID( 'Zaginione zwierzęta - ogłoszenia' ) ); ?>
               <a href="<?php echo $category_url; ?>" class="adoptions-item-more-link">Wszystkie zaginione...</a>
             </div>
           </a>
